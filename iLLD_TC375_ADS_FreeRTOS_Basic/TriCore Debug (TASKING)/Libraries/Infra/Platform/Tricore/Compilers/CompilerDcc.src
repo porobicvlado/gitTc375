@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc10904a --dep-file=Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.src ../Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.c"
+	.compiler_invocation	"ctc -f cc2480a --dep-file=Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.src ../Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.c"
 	.compiler_name		"ctc"
 	;source	'../Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.c'
 
@@ -10,7 +10,7 @@ $TC162
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
 .L3:
-	.word	671
+	.word	625
 	.half	3
 	.word	.L4
 	.byte	4
@@ -18,62 +18,62 @@ $TC162
 	.byte	1
 	.byte	'../Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L5
 	.byte	2
 	.byte	'short int',0,2,5,3
 	.byte	'__wchar_t',0,1,1,1
-	.word	305
+	.word	259
 	.byte	2
 	.byte	'unsigned int',0,4,7,3
 	.byte	'__size_t',0,1,1,1
-	.word	336
+	.word	290
 	.byte	2
 	.byte	'int',0,4,5,3
 	.byte	'__ptrdiff_t',0,1,1,1
-	.word	369
+	.word	323
 	.byte	4,1,5
-	.word	396
+	.word	350
 	.byte	3
 	.byte	'__codeptr',0,1,1,1
-	.word	398
+	.word	352
 	.byte	2
 	.byte	'unsigned char',0,1,8,3
 	.byte	'uint8',0,2,108,29
-	.word	421
+	.word	375
 	.byte	2
 	.byte	'unsigned short int',0,2,7,3
 	.byte	'uint16',0,2,112,29
-	.word	452
+	.word	406
 	.byte	2
 	.byte	'unsigned long int',0,4,7,3
 	.byte	'uint32',0,2,116,29
-	.word	489
+	.word	443
 	.byte	3
 	.byte	'sint16',0,2,129,1,29
-	.word	305
+	.word	259
 	.byte	2
 	.byte	'long int',0,4,5,3
 	.byte	'sint32',0,2,134,1,29
-	.word	541
+	.word	495
 	.byte	2
 	.byte	'long long int',0,8,5,3
 	.byte	'sint64',0,2,141,1,29
-	.word	569
+	.word	523
 	.byte	2
 	.byte	'float',0,4,4,3
 	.byte	'float32',0,2,170,1,29
-	.word	602
+	.word	556
 	.byte	6
 	.byte	'void',0,5
-	.word	628
+	.word	582
 	.byte	3
 	.byte	'pvoid',0,3,54,28
-	.word	634
+	.word	588
 	.byte	3
 	.byte	'Ifx_TickTime',0,3,76,28
-	.word	569
+	.word	523
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
@@ -90,9 +90,9 @@ $TC162
 .L8:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../Libraries/Infra/Platform/Tricore/Compilers/CompilerDcc.c',0,0,0,0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0
 	.byte	0,0,0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Ifx_Types.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Ifx_Types.h',0
 	.byte	0,0,0,0
 .L9:
 .L7:

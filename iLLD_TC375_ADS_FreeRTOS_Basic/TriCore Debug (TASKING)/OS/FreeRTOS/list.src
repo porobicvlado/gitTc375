@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc14308a --dep-file=OS/FreeRTOS/list.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o OS/FreeRTOS/list.src ../OS/FreeRTOS/list.c"
+	.compiler_invocation	"ctc -f cc9956a --dep-file=OS/FreeRTOS/list.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o OS/FreeRTOS/list.src ../OS/FreeRTOS/list.c"
 	.compiler_name		"ctc"
 	;source	'../OS/FreeRTOS/list.c'
 
@@ -304,7 +304,7 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
 .L27:
-	.word	1705
+	.word	1659
 	.half	3
 	.word	.L28
 	.byte	4
@@ -312,22 +312,22 @@ __uxListRemove_function_end:
 	.byte	1
 	.byte	'../OS/FreeRTOS/list.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L29
 	.byte	2
 	.byte	'int',0,4,5,3
 	.byte	'__mtcr',0,1,1,1,1,4
-	.word	267
+	.word	221
 	.byte	4
-	.word	267
+	.word	221
 	.byte	0,5
-	.word	267
+	.word	221
 	.byte	6
 	.byte	'__mfcr',0
-	.word	297
+	.word	251
 	.byte	1,1,1,1,4
-	.word	267
+	.word	221
 	.byte	0,7
 	.byte	'__disable',0,1,1,1,1,7
 	.byte	'__enable',0,1,1,1,1
@@ -343,226 +343,226 @@ __uxListRemove_function_end:
 .L102:
 	.byte	2
 	.byte	'unsigned long int',0,4,7,5
-	.word	398
+	.word	352
 	.byte	8
 	.word	.L115-.L27
 	.byte	9
 	.byte	'void',0,8
-	.word	429
+	.word	383
 	.byte	8
 	.word	.L116-.L27
 .L115:
 	.byte	10
 	.byte	'xLIST_ITEM',0,1,144,1,8,20,11
 	.byte	'xItemValue',0
-	.word	382
+	.word	336
 	.byte	4,2,35,0,11
 	.byte	'pxNext',0
-	.word	424
+	.word	378
 	.byte	4,2,35,4,11
 	.byte	'pxPrevious',0
-	.word	424
+	.word	378
 	.byte	4,2,35,8,11
 	.byte	'pvOwner',0
-	.word	435
+	.word	389
 	.byte	4,2,35,12,11
 	.byte	'pxContainer',0
-	.word	440
+	.word	394
 	.byte	4,2,35,16,0
 .L91:
 	.byte	8
-	.word	445
+	.word	399
 	.byte	10
 	.byte	'xMINI_LIST_ITEM',0,1,157,1,12,12,11
 	.byte	'xItemValue',0
-	.word	382
+	.word	336
 	.byte	4,2,35,0,11
 	.byte	'pxNext',0
-	.word	424
+	.word	378
 	.byte	4,2,35,4,11
 	.byte	'pxPrevious',0
-	.word	424
+	.word	378
 	.byte	4,2,35,8,0
 .L116:
 	.byte	10
 	.byte	'xLIST',0,1,172,1,16,20,11
 	.byte	'uxNumberOfItems',0
-	.word	419
+	.word	373
 	.byte	4,2,35,0,11
 	.byte	'pxIndex',0
-	.word	557
+	.word	511
 	.byte	4,2,35,4,11
 	.byte	'xListEnd',0
-	.word	562
+	.word	516
 	.byte	12,2,35,8,0,8
-	.word	641
+	.word	595
 .L81:
 	.byte	12
-	.word	714
+	.word	668
 .L84:
 	.byte	12
-	.word	557
+	.word	511
 .L87:
 	.byte	12
-	.word	714
+	.word	668
 .L89:
 	.byte	12
-	.word	557
+	.word	511
 .L93:
 	.byte	12
-	.word	382
+	.word	336
 .L96:
 	.byte	12
-	.word	714
+	.word	668
 .L98:
 	.byte	12
-	.word	557
+	.word	511
 .L100:
 	.byte	12
-	.word	557
+	.word	511
 .L104:
 	.byte	12
-	.word	557
+	.word	511
 .L106:
 	.byte	12
-	.word	714
+	.word	668
 	.byte	2
 	.byte	'short int',0,2,5,13
 	.byte	'__wchar_t',0,2,1,1
-	.word	769
+	.word	723
 	.byte	13
 	.byte	'__size_t',0,2,1,1
-	.word	382
+	.word	336
 	.byte	13
 	.byte	'__ptrdiff_t',0,2,1,1
-	.word	267
+	.word	221
 	.byte	14,1,8
-	.word	837
+	.word	791
 	.byte	13
 	.byte	'__codeptr',0,2,1,1
-	.word	839
+	.word	793
 	.byte	13
 	.byte	'__intptr_t',0,2,1,1
-	.word	267
+	.word	221
 	.byte	13
 	.byte	'__uintptr_t',0,2,1,1
-	.word	382
+	.word	336
 	.byte	13
 	.byte	'size_t',0,3,29,25
-	.word	382
+	.word	336
 	.byte	13
 	.byte	'uint8_t',0,4,242,1,41
-	.word	353
+	.word	307
 	.byte	13
 	.byte	'uint32_t',0,4,254,1,41
-	.word	382
+	.word	336
 	.byte	15,1,1,4
-	.word	435
+	.word	389
 	.byte	0,8
-	.word	951
+	.word	905
 	.byte	13
 	.byte	'TaskFunction_t',0,5,36,17
-	.word	960
+	.word	914
 	.byte	13
 	.byte	'UBaseType_t',0,6,76,30
-	.word	398
+	.word	352
 	.byte	13
 	.byte	'TickType_t',0,6,82,30
-	.word	382
+	.word	336
 	.byte	16,16
-	.word	435
+	.word	389
 	.byte	17,3,0,10
 	.byte	'xSTATIC_LIST_ITEM',0,7,177,9,8,20,11
 	.byte	'xDummy2',0
-	.word	382
+	.word	336
 	.byte	4,2,35,0,11
 	.byte	'pvDummy3',0
-	.word	1027
+	.word	981
 	.byte	16,2,35,4,0,13
 	.byte	'StaticListItem_t',0,7,188,9,34
-	.word	1036
+	.word	990
 	.byte	16,8
-	.word	435
+	.word	389
 	.byte	17,1,0,10
 	.byte	'xSTATIC_MINI_LIST_ITEM',0,7,192,9,12,12,11
 	.byte	'xDummy2',0
-	.word	382
+	.word	336
 	.byte	4,2,35,0,11
 	.byte	'pvDummy3',0
-	.word	1122
+	.word	1076
 	.byte	8,2,35,4,0,13
 	.byte	'StaticMiniListItem_t',0,7,200,9,43
-	.word	1131
+	.word	1085
 	.byte	10
 	.byte	'xSTATIC_LIST',0,7,206,9,16,20,11
 	.byte	'uxDummy2',0
-	.word	398
+	.word	352
 	.byte	4,2,35,0,11
 	.byte	'pvDummy3',0
-	.word	435
+	.word	389
 	.byte	4,2,35,4,11
 	.byte	'xDummy4',0
-	.word	1131
+	.word	1085
 	.byte	12,2,35,8,0,13
 	.byte	'StaticList_t',0,7,217,9,3
-	.word	1226
+	.word	1180
 	.byte	16,12
-	.word	435
+	.word	389
 	.byte	17,2,0,18,7,172,10,5,4,11
 	.byte	'pvDummy2',0
-	.word	435
+	.word	389
 	.byte	4,2,35,0,11
 	.byte	'uxDummy2',0
-	.word	398
+	.word	352
 	.byte	4,2,35,0,0,16,40
-	.word	1226
+	.word	1180
 	.byte	17,1,0,16,12
-	.word	398
+	.word	352
 	.byte	17,2,0,16,2
-	.word	353
+	.word	307
 	.byte	17,1,0,10
 	.byte	'xSTATIC_QUEUE',0,7,168,10,16,72,11
 	.byte	'pvDummy1',0
-	.word	1321
+	.word	1275
 	.byte	12,2,35,0,11
 	.byte	'u',0
-	.word	1330
+	.word	1284
 	.byte	4,2,35,12,11
 	.byte	'xDummy3',0
-	.word	1373
+	.word	1327
 	.byte	40,2,35,16,11
 	.byte	'uxDummy4',0
-	.word	1382
+	.word	1336
 	.byte	12,2,35,56,11
 	.byte	'ucDummy5',0
-	.word	1391
+	.word	1345
 	.byte	2,2,35,68,0,13
 	.byte	'StaticQueue_t',0,7,194,10,3
-	.word	1400
+	.word	1354
 	.byte	16,16
-	.word	382
+	.word	336
 	.byte	17,3,0,10
 	.byte	'xSTATIC_STREAM_BUFFER',0,7,138,11,16,32,11
 	.byte	'uxDummy1',0
-	.word	1526
+	.word	1480
 	.byte	16,2,35,0,11
 	.byte	'pvDummy2',0
-	.word	1321
+	.word	1275
 	.byte	12,2,35,16,11
 	.byte	'ucDummy3',0
-	.word	353
+	.word	307
 	.byte	1,2,35,28,0,13
 	.byte	'StaticStreamBuffer_t',0,7,149,11,3
-	.word	1535
+	.word	1489
 	.byte	13
 	.byte	'ListItem_t',0,1,154,1,27
-	.word	445
+	.word	399
 	.byte	13
 	.byte	'MiniListItem_t',0,1,164,1,36
-	.word	562
+	.word	516
 	.byte	13
 	.byte	'List_t',0,1,179,1,3
-	.word	641
+	.word	595
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
@@ -581,9 +581,9 @@ __uxListRemove_function_end:
 	.word	.L120-.L119
 .L119:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include',0
 	.byte	'C:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'list.h',0,1,0,0
 	.byte	'../OS/FreeRTOS/list.c',0,0,0,0
@@ -597,13 +597,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('vPortSetCCPN')
 	.sect	'.debug_info'
 .L30:
-	.word	495
+	.word	401
 	.half	3
 	.word	.L31
 	.byte	4,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L33,.L32
 	.byte	2
@@ -631,7 +631,7 @@ __uxListRemove_function_end:
 	.word	.L124-.L123
 .L123:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0,0
 .L124:
@@ -662,13 +662,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('vPortSetICR')
 	.sect	'.debug_info'
 .L35:
-	.word	493
+	.word	399
 	.half	3
 	.word	.L36
 	.byte	4,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L38,.L37
 	.byte	2
@@ -696,7 +696,7 @@ __uxListRemove_function_end:
 	.word	.L135-.L134
 .L134:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0,0
 .L135:
@@ -719,13 +719,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('xPortSetCCPN')
 	.sect	'.debug_info'
 .L40:
-	.word	518
+	.word	424
 	.half	3
 	.word	.L41
 	.byte	4,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L43,.L42
 	.byte	2
@@ -759,7 +759,7 @@ __uxListRemove_function_end:
 	.word	.L142-.L141
 .L141:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0,0
 .L142:
@@ -792,13 +792,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('vListInitialise')
 	.sect	'.debug_info'
 .L45:
-	.word	337
+	.word	291
 	.half	3
 	.word	.L46
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/list.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L48,.L47
 	.byte	2
@@ -861,13 +861,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('vListInitialiseItem')
 	.sect	'.debug_info'
 .L50:
-	.word	341
+	.word	295
 	.half	3
 	.word	.L51
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/list.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L53,.L52
 	.byte	2
@@ -914,13 +914,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('vListInsert')
 	.sect	'.debug_info'
 .L55:
-	.word	418
+	.word	372
 	.half	3
 	.word	.L56
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/list.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L58,.L57
 	.byte	2
@@ -1011,13 +1011,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('vListInsertEnd')
 	.sect	'.debug_info'
 .L60:
-	.word	383
+	.word	337
 	.half	3
 	.word	.L61
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/list.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L63,.L62
 	.byte	2
@@ -1087,13 +1087,13 @@ __uxListRemove_function_end:
 	.sdecl	'.debug_info',debug,cluster('uxListRemove')
 	.sect	'.debug_info'
 .L65:
-	.word	369
+	.word	323
 	.half	3
 	.word	.L66
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/list.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L68,.L67
 	.byte	2

@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc6656a --dep-file=Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.src ../Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.c"
+	.compiler_invocation	"ctc -f cc10700a --dep-file=Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.src ../Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.c"
 	.compiler_name		"ctc"
 	;source	'../Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.c'
 
@@ -29,7 +29,7 @@ IfxEvadc_cfg_srcAddresses:	.type	object
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
 .L3:
-	.word	6414
+	.word	6368
 	.half	3
 	.word	.L4
 	.byte	4
@@ -37,990 +37,990 @@ IfxEvadc_cfg_srcAddresses:	.type	object
 	.byte	1
 	.byte	'../Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1
 	.word	.L5
 	.byte	2,1,1,3
-	.word	298
+	.word	252
 	.byte	4
 	.byte	'Ifx__jump_and_link',0,3,1,58,17,1,1,5
 	.byte	'fun',0,1,58,43
-	.word	301
+	.word	255
 	.byte	6,0,7
 	.byte	'__fract',0,4,128,1,7
 	.byte	'float',0,4,4,8
 	.byte	'Ifx__float_to_fract',0,3,1,149,2,18
-	.word	346
+	.word	300
 	.byte	1,1,5
 	.byte	'a',0,1,149,2,44
-	.word	358
+	.word	312
 	.byte	6,0,7
 	.byte	'unsigned long long int',0,8,7,9
 	.byte	'void',0,3
-	.word	438
+	.word	392
 	.byte	8
 	.byte	'__ld64',0,3,2,132,1,19
-	.word	412
+	.word	366
 	.byte	1,1,5
 	.byte	'addr',0,2,132,1,32
-	.word	444
+	.word	398
 	.byte	6,0,4
 	.byte	'__st64',0,3,2,140,1,17,1,1,5
 	.byte	'addr',0,2,140,1,30
-	.word	444
+	.word	398
 	.byte	5
 	.byte	'value',0,2,140,1,43
-	.word	412
+	.word	366
 	.byte	6,0,7
 	.byte	'unsigned int',0,4,7,7
 	.byte	'int',0,4,5,7
 	.byte	'unsigned char',0,1,8,10
 	.byte	'_Ifx_SRC_SRCR_Bits',0,4,68,16,4,11
 	.byte	'SRPN',0,1
-	.word	553
+	.word	507
 	.byte	8,0,2,35,0,11
 	.byte	'reserved_8',0,1
-	.word	553
+	.word	507
 	.byte	2,6,2,35,1,11
 	.byte	'SRE',0,1
-	.word	553
+	.word	507
 	.byte	1,5,2,35,1,11
 	.byte	'TOS',0,1
-	.word	553
+	.word	507
 	.byte	3,2,2,35,1,11
 	.byte	'reserved_14',0,1
-	.word	553
+	.word	507
 	.byte	2,0,2,35,1,11
 	.byte	'ECC',0,1
-	.word	553
+	.word	507
 	.byte	5,3,2,35,2,11
 	.byte	'reserved_21',0,1
-	.word	553
+	.word	507
 	.byte	3,0,2,35,2,11
 	.byte	'SRR',0,1
-	.word	553
+	.word	507
 	.byte	1,7,2,35,3,11
 	.byte	'CLRR',0,1
-	.word	553
+	.word	507
 	.byte	1,6,2,35,3,11
 	.byte	'SETR',0,1
-	.word	553
+	.word	507
 	.byte	1,5,2,35,3,11
 	.byte	'IOV',0,1
-	.word	553
+	.word	507
 	.byte	1,4,2,35,3,11
 	.byte	'IOVCLR',0,1
-	.word	553
+	.word	507
 	.byte	1,3,2,35,3,11
 	.byte	'SWS',0,1
-	.word	553
+	.word	507
 	.byte	1,2,2,35,3,11
 	.byte	'SWSCLR',0,1
-	.word	553
+	.word	507
 	.byte	1,1,2,35,3,11
 	.byte	'reserved_31',0,1
-	.word	553
+	.word	507
 	.byte	1,0,2,35,3,0,12,4,93,9,4,13
 	.byte	'U',0
-	.word	530
+	.word	484
 	.byte	4,2,35,0,13
 	.byte	'I',0
-	.word	546
+	.word	500
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	570
+	.word	524
 	.byte	4,2,35,0,0,14
-	.word	860
+	.word	814
 	.byte	3
-	.word	899
+	.word	853
 	.byte	4
 	.byte	'IfxSrc_clearRequest',0,3,3,247,1,17,1,1,5
 	.byte	'src',0,3,247,1,60
-	.word	904
+	.word	858
 	.byte	6,0,15
-	.word	306
+	.word	260
 	.byte	16
-	.word	332
+	.word	286
 	.byte	6,0,15
-	.word	367
+	.word	321
 	.byte	16
-	.word	399
+	.word	353
 	.byte	6,0,15
-	.word	449
+	.word	403
 	.byte	16
-	.word	468
+	.word	422
 	.byte	6,0,15
-	.word	484
+	.word	438
 	.byte	16
-	.word	499
+	.word	453
 	.byte	16
-	.word	513
+	.word	467
 	.byte	6,0,15
-	.word	909
+	.word	863
 	.byte	16
-	.word	937
+	.word	891
 	.byte	6,0,7
 	.byte	'short int',0,2,5,17
 	.byte	'__wchar_t',0,5,1,1
-	.word	1017
+	.word	971
 	.byte	17
 	.byte	'__size_t',0,5,1,1
-	.word	530
+	.word	484
 	.byte	17
 	.byte	'__ptrdiff_t',0,5,1,1
-	.word	546
+	.word	500
 	.byte	18,1,3
-	.word	1085
+	.word	1039
 	.byte	17
 	.byte	'__codeptr',0,5,1,1
-	.word	1087
+	.word	1041
 	.byte	19,6,66,9,1,20
 	.byte	'IfxSrc_Tos_cpu0',0,0,20
 	.byte	'IfxSrc_Tos_dma',0,1,20
 	.byte	'IfxSrc_Tos_cpu1',0,2,20
 	.byte	'IfxSrc_Tos_cpu2',0,3,0,17
 	.byte	'IfxSrc_Tos',0,6,72,3
-	.word	1110
+	.word	1064
 	.byte	17
 	.byte	'boolean',0,7,104,29
-	.word	553
+	.word	507
 	.byte	17
 	.byte	'uint8',0,7,108,29
-	.word	553
+	.word	507
 	.byte	7
 	.byte	'unsigned short int',0,2,7,17
 	.byte	'uint16',0,7,112,29
-	.word	1236
+	.word	1190
 	.byte	7
 	.byte	'unsigned long int',0,4,7,17
 	.byte	'uint32',0,7,116,29
-	.word	1273
+	.word	1227
 	.byte	17
 	.byte	'uint64',0,7,121,29
-	.word	412
+	.word	366
 	.byte	17
 	.byte	'sint16',0,7,129,1,29
-	.word	1017
+	.word	971
 	.byte	7
 	.byte	'long int',0,4,5,17
 	.byte	'sint32',0,7,134,1,29
-	.word	1340
+	.word	1294
 	.byte	7
 	.byte	'long long int',0,8,5,17
 	.byte	'sint64',0,7,141,1,29
-	.word	1368
+	.word	1322
 	.byte	17
 	.byte	'float32',0,7,170,1,29
-	.word	358
+	.word	312
 	.byte	17
 	.byte	'pvoid',0,8,54,28
-	.word	444
+	.word	398
 	.byte	17
 	.byte	'Ifx_TickTime',0,8,76,28
-	.word	1368
+	.word	1322
 	.byte	17
 	.byte	'Ifx_Priority',0,8,100,16
-	.word	1236
+	.word	1190
 	.byte	17
 	.byte	'Ifx_UReg_8Bit',0,9,96,24
-	.word	553
+	.word	507
 	.byte	17
 	.byte	'Ifx_UReg_32Bit',0,9,98,24
-	.word	530
+	.word	484
 	.byte	17
 	.byte	'Ifx_SReg_32Bit',0,9,101,24
-	.word	546
+	.word	500
 	.byte	17
 	.byte	'Ifx_SRC_SRCR_Bits',0,4,85,3
-	.word	570
+	.word	524
 	.byte	17
 	.byte	'Ifx_SRC_SRCR',0,4,98,3
-	.word	860
+	.word	814
 	.byte	10
 	.byte	'_Ifx_SRC_CPU_CPU',0,4,110,25,4,13
 	.byte	'SB',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,0,14
-	.word	1589
+	.word	1543
 	.byte	17
 	.byte	'Ifx_SRC_CPU_CPU',0,4,113,3
-	.word	1624
+	.word	1578
 	.byte	21,12
-	.word	1589
+	.word	1543
 	.byte	22,2,0,14
-	.word	1653
+	.word	1607
 	.byte	10
 	.byte	'_Ifx_SRC_CPU',0,4,128,1,25,12,13
 	.byte	'CPU',0
-	.word	1662
+	.word	1616
 	.byte	12,2,35,0,0,14
-	.word	1667
+	.word	1621
 	.byte	17
 	.byte	'Ifx_SRC_CPU',0,4,131,1,3
-	.word	1700
+	.word	1654
 	.byte	21,8
-	.word	860
+	.word	814
 	.byte	22,1,0,10
 	.byte	'_Ifx_SRC_CERBERUS_CERBERUS',0,4,146,1,25,8,13
 	.byte	'SR',0
-	.word	1726
+	.word	1680
 	.byte	8,2,35,0,0,14
-	.word	1735
+	.word	1689
 	.byte	17
 	.byte	'Ifx_SRC_CERBERUS_CERBERUS',0,4,149,1,3
-	.word	1781
-	.byte	14
 	.word	1735
+	.byte	14
+	.word	1689
 	.byte	10
 	.byte	'_Ifx_SRC_CERBERUS',0,4,164,1,25,8,13
 	.byte	'CERBERUS',0
-	.word	1821
+	.word	1775
 	.byte	8,2,35,0,0,14
-	.word	1826
+	.word	1780
 	.byte	17
 	.byte	'Ifx_SRC_CERBERUS',0,4,167,1,3
-	.word	1869
+	.word	1823
 	.byte	10
 	.byte	'_Ifx_SRC_ASCLIN_ASCLIN',0,4,182,1,25,12,13
 	.byte	'TX',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'RX',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'ERR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,0,14
-	.word	1900
+	.word	1854
 	.byte	17
 	.byte	'Ifx_SRC_ASCLIN_ASCLIN',0,4,187,1,3
-	.word	1967
+	.word	1921
 	.byte	21,144,1
-	.word	1900
+	.word	1854
 	.byte	22,11,0,14
-	.word	2003
+	.word	1957
 	.byte	10
 	.byte	'_Ifx_SRC_ASCLIN',0,4,202,1,25,144,1,13
 	.byte	'ASCLIN',0
-	.word	2013
+	.word	1967
 	.byte	144,1,2,35,0,0,14
-	.word	2018
+	.word	1972
 	.byte	17
 	.byte	'Ifx_SRC_ASCLIN',0,4,205,1,3
-	.word	2059
+	.word	2013
 	.byte	10
 	.byte	'_Ifx_SRC_QSPI_QSPI',0,4,220,1,25,20,13
 	.byte	'TX',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'RX',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'ERR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,13
 	.byte	'PT',0
-	.word	860
+	.word	814
 	.byte	4,2,35,12,13
 	.byte	'U',0
-	.word	860
+	.word	814
 	.byte	4,2,35,16,0,14
-	.word	2088
+	.word	2042
 	.byte	17
 	.byte	'Ifx_SRC_QSPI_QSPI',0,4,227,1,3
-	.word	2174
+	.word	2128
 	.byte	21,100
-	.word	2088
+	.word	2042
 	.byte	22,4,0,14
-	.word	2206
+	.word	2160
 	.byte	10
 	.byte	'_Ifx_SRC_QSPI',0,4,242,1,25,100,13
 	.byte	'QSPI',0
-	.word	2215
+	.word	2169
 	.byte	100,2,35,0,0,14
-	.word	2220
+	.word	2174
 	.byte	17
 	.byte	'Ifx_SRC_QSPI',0,4,245,1,3
-	.word	2255
+	.word	2209
 	.byte	10
 	.byte	'_Ifx_SRC_HSCT_HSCT',0,4,132,2,25,4,13
 	.byte	'SR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,0,14
-	.word	2282
+	.word	2236
 	.byte	17
 	.byte	'Ifx_SRC_HSCT_HSCT',0,4,135,2,3
-	.word	2320
+	.word	2274
 	.byte	21,4
-	.word	2282
+	.word	2236
 	.byte	22,0,0,14
-	.word	2352
+	.word	2306
 	.byte	10
 	.byte	'_Ifx_SRC_HSCT',0,4,150,2,25,4,13
 	.byte	'HSCT',0
-	.word	2361
+	.word	2315
 	.byte	4,2,35,0,0,14
-	.word	2366
+	.word	2320
 	.byte	17
 	.byte	'Ifx_SRC_HSCT',0,4,153,2,3
-	.word	2401
+	.word	2355
 	.byte	10
 	.byte	'_Ifx_SRC_HSSL_HSSL_CH',0,4,168,2,25,16,13
 	.byte	'COK',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'RDI',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'ERR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,13
 	.byte	'TRG',0
-	.word	860
+	.word	814
 	.byte	4,2,35,12,0,14
-	.word	2428
+	.word	2382
 	.byte	17
 	.byte	'Ifx_SRC_HSSL_HSSL_CH',0,4,174,2,3
-	.word	2509
+	.word	2463
 	.byte	21,64
-	.word	2428
+	.word	2382
 	.byte	22,3,0,14
-	.word	2544
+	.word	2498
 	.byte	10
 	.byte	'_Ifx_SRC_HSSL_HSSL',0,4,189,2,25,68,13
 	.byte	'CH',0
-	.word	2553
+	.word	2507
 	.byte	64,2,35,0,13
 	.byte	'EXI',0
-	.word	860
+	.word	814
 	.byte	4,2,35,64,0,14
-	.word	2558
+	.word	2512
 	.byte	17
 	.byte	'Ifx_SRC_HSSL_HSSL',0,4,193,2,3
-	.word	2609
+	.word	2563
 	.byte	21,68
-	.word	2558
+	.word	2512
 	.byte	22,0,0,14
-	.word	2641
+	.word	2595
 	.byte	10
 	.byte	'_Ifx_SRC_HSSL',0,4,208,2,25,68,13
 	.byte	'HSSL',0
-	.word	2650
+	.word	2604
 	.byte	68,2,35,0,0,14
-	.word	2655
+	.word	2609
 	.byte	17
 	.byte	'Ifx_SRC_HSSL',0,4,211,2,3
-	.word	2690
+	.word	2644
 	.byte	21,4
-	.word	553
+	.word	507
 	.byte	22,3,0,10
 	.byte	'_Ifx_SRC_I2C_I2C',0,4,226,2,25,16,13
 	.byte	'DTR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'ERR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'P',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,13
 	.byte	'reserved_C',0
-	.word	2717
+	.word	2671
 	.byte	4,2,35,12,0,14
-	.word	2726
+	.word	2680
 	.byte	17
 	.byte	'Ifx_SRC_I2C_I2C',0,4,232,2,3
-	.word	2807
+	.word	2761
 	.byte	21,16
-	.word	2726
+	.word	2680
 	.byte	22,0,0,14
-	.word	2837
+	.word	2791
 	.byte	10
 	.byte	'_Ifx_SRC_I2C',0,4,247,2,25,16,13
 	.byte	'I2C',0
-	.word	2846
+	.word	2800
 	.byte	16,2,35,0,0,14
-	.word	2851
+	.word	2805
 	.byte	17
 	.byte	'Ifx_SRC_I2C',0,4,250,2,3
-	.word	2884
+	.word	2838
 	.byte	10
 	.byte	'_Ifx_SRC_SENT_SENT',0,4,137,3,25,4,13
 	.byte	'SR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,0,14
-	.word	2910
+	.word	2864
 	.byte	17
 	.byte	'Ifx_SRC_SENT_SENT',0,4,140,3,3
-	.word	2948
+	.word	2902
 	.byte	21,40
-	.word	2910
+	.word	2864
 	.byte	22,9,0,14
-	.word	2980
+	.word	2934
 	.byte	10
 	.byte	'_Ifx_SRC_SENT',0,4,155,3,25,40,13
 	.byte	'SENT',0
-	.word	2989
+	.word	2943
 	.byte	40,2,35,0,0,14
-	.word	2994
+	.word	2948
 	.byte	17
 	.byte	'Ifx_SRC_SENT',0,4,158,3,3
-	.word	3029
+	.word	2983
 	.byte	21,20
-	.word	860
+	.word	814
 	.byte	22,4,0,10
 	.byte	'_Ifx_SRC_MSC_MSC',0,4,173,3,25,20,13
 	.byte	'SR',0
-	.word	3056
+	.word	3010
 	.byte	20,2,35,0,0,14
-	.word	3065
+	.word	3019
 	.byte	17
 	.byte	'Ifx_SRC_MSC_MSC',0,4,176,3,3
-	.word	3101
+	.word	3055
 	.byte	21,40
-	.word	3065
+	.word	3019
 	.byte	22,1,0,14
-	.word	3131
+	.word	3085
 	.byte	10
 	.byte	'_Ifx_SRC_MSC',0,4,191,3,25,40,13
 	.byte	'MSC',0
-	.word	3140
+	.word	3094
 	.byte	40,2,35,0,0,14
-	.word	3145
+	.word	3099
 	.byte	17
 	.byte	'Ifx_SRC_MSC',0,4,194,3,3
-	.word	3178
+	.word	3132
 	.byte	21,16
-	.word	860
+	.word	814
 	.byte	22,3,0,10
 	.byte	'_Ifx_SRC_CCU6_CCU',0,4,209,3,25,16,13
 	.byte	'SR',0
-	.word	3204
+	.word	3158
 	.byte	16,2,35,0,0,14
-	.word	3213
+	.word	3167
 	.byte	17
 	.byte	'Ifx_SRC_CCU6_CCU',0,4,212,3,3
-	.word	3250
+	.word	3204
 	.byte	21,32
-	.word	3213
+	.word	3167
 	.byte	22,1,0,14
-	.word	3281
+	.word	3235
 	.byte	10
 	.byte	'_Ifx_SRC_CCU6',0,4,227,3,25,32,13
 	.byte	'CCU',0
-	.word	3290
+	.word	3244
 	.byte	32,2,35,0,0,14
-	.word	3295
+	.word	3249
 	.byte	17
 	.byte	'Ifx_SRC_CCU6',0,4,230,3,3
-	.word	3329
+	.word	3283
 	.byte	10
 	.byte	'_Ifx_SRC_GPT12_GPT12',0,4,245,3,25,24,13
 	.byte	'CIRQ',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'T2',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'T3',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,13
 	.byte	'T4',0
-	.word	860
+	.word	814
 	.byte	4,2,35,12,13
 	.byte	'T5',0
-	.word	860
+	.word	814
 	.byte	4,2,35,16,13
 	.byte	'T6',0
-	.word	860
+	.word	814
 	.byte	4,2,35,20,0,14
-	.word	3356
+	.word	3310
 	.byte	17
 	.byte	'Ifx_SRC_GPT12_GPT12',0,4,253,3,3
-	.word	3458
+	.word	3412
 	.byte	21,24
-	.word	3356
+	.word	3310
 	.byte	22,0,0,14
-	.word	3492
+	.word	3446
 	.byte	10
 	.byte	'_Ifx_SRC_GPT12',0,4,140,4,25,24,13
 	.byte	'GPT12',0
-	.word	3501
+	.word	3455
 	.byte	24,2,35,0,0,14
-	.word	3506
+	.word	3460
 	.byte	17
 	.byte	'Ifx_SRC_GPT12',0,4,143,4,3
-	.word	3543
+	.word	3497
 	.byte	10
 	.byte	'_Ifx_SRC_STM_STM',0,4,158,4,25,8,13
 	.byte	'SR',0
-	.word	1726
+	.word	1680
 	.byte	8,2,35,0,0,14
-	.word	3571
+	.word	3525
 	.byte	17
 	.byte	'Ifx_SRC_STM_STM',0,4,161,4,3
-	.word	3607
+	.word	3561
 	.byte	21,24
-	.word	3571
+	.word	3525
 	.byte	22,2,0,14
-	.word	3637
+	.word	3591
 	.byte	10
 	.byte	'_Ifx_SRC_STM',0,4,176,4,25,24,13
 	.byte	'STM',0
-	.word	3646
+	.word	3600
 	.byte	24,2,35,0,0,14
-	.word	3651
+	.word	3605
 	.byte	17
 	.byte	'Ifx_SRC_STM',0,4,179,4,3
-	.word	3684
+	.word	3638
 	.byte	10
 	.byte	'_Ifx_SRC_FCE_FCE0',0,4,194,4,25,4,13
 	.byte	'SR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,0,14
-	.word	3710
+	.word	3664
 	.byte	17
 	.byte	'Ifx_SRC_FCE_FCE0',0,4,197,4,3
-	.word	3747
+	.word	3701
 	.byte	14
-	.word	3710
+	.word	3664
 	.byte	10
 	.byte	'_Ifx_SRC_FCE',0,4,212,4,25,4,13
 	.byte	'FCE0',0
-	.word	3778
+	.word	3732
 	.byte	4,2,35,0,0,14
-	.word	3783
+	.word	3737
 	.byte	17
 	.byte	'Ifx_SRC_FCE',0,4,215,4,3
-	.word	3817
+	.word	3771
 	.byte	21,32
-	.word	553
+	.word	507
 	.byte	22,31,0,21,128,4
-	.word	860
+	.word	814
 	.byte	22,127,0,10
 	.byte	'_Ifx_SRC_DMA_DMA',0,4,230,4,25,176,4,13
 	.byte	'ERR',0
-	.word	3204
+	.word	3158
 	.byte	16,2,35,0,13
 	.byte	'reserved_10',0
-	.word	3843
+	.word	3797
 	.byte	32,2,35,16,13
 	.byte	'CH',0
-	.word	3852
+	.word	3806
 	.byte	128,4,2,35,48,0,14
-	.word	3862
+	.word	3816
 	.byte	17
 	.byte	'Ifx_SRC_DMA_DMA',0,4,235,4,3
-	.word	3934
+	.word	3888
 	.byte	21,176,4
-	.word	3862
+	.word	3816
 	.byte	22,0,0,14
-	.word	3964
+	.word	3918
 	.byte	10
 	.byte	'_Ifx_SRC_DMA',0,4,250,4,25,176,4,13
 	.byte	'DMA',0
-	.word	3974
+	.word	3928
 	.byte	176,4,2,35,0,0,14
-	.word	3979
+	.word	3933
 	.byte	17
 	.byte	'Ifx_SRC_DMA',0,4,253,4,3
-	.word	4014
+	.word	3968
 	.byte	21,40
-	.word	860
+	.word	814
 	.byte	22,9,0,10
 	.byte	'_Ifx_SRC_GETH_GETH',0,4,140,5,25,40,13
 	.byte	'SR',0
-	.word	4040
+	.word	3994
 	.byte	40,2,35,0,0,14
-	.word	4049
+	.word	4003
 	.byte	17
 	.byte	'Ifx_SRC_GETH_GETH',0,4,143,5,3
-	.word	4087
+	.word	4041
 	.byte	21,40
-	.word	4049
+	.word	4003
 	.byte	22,0,0,14
-	.word	4119
+	.word	4073
 	.byte	10
 	.byte	'_Ifx_SRC_GETH',0,4,158,5,25,40,13
 	.byte	'GETH',0
-	.word	4128
+	.word	4082
 	.byte	40,2,35,0,0,14
-	.word	4133
+	.word	4087
 	.byte	17
 	.byte	'Ifx_SRC_GETH',0,4,161,5,3
-	.word	4168
+	.word	4122
 	.byte	21,64
-	.word	860
+	.word	814
 	.byte	22,15,0,10
 	.byte	'_Ifx_SRC_CAN_CAN',0,4,176,5,25,64,13
 	.byte	'INT',0
-	.word	4195
+	.word	4149
 	.byte	64,2,35,0,0,14
-	.word	4204
+	.word	4158
 	.byte	17
 	.byte	'Ifx_SRC_CAN_CAN',0,4,179,5,3
-	.word	4241
+	.word	4195
 	.byte	21,128,1
-	.word	4204
+	.word	4158
 	.byte	22,1,0,14
-	.word	4271
+	.word	4225
 	.byte	10
 	.byte	'_Ifx_SRC_CAN',0,4,194,5,25,128,1,13
 	.byte	'CAN',0
-	.word	4281
+	.word	4235
 	.byte	128,1,2,35,0,0,14
-	.word	4286
+	.word	4240
 	.byte	17
 	.byte	'Ifx_SRC_CAN',0,4,197,5,3
-	.word	4321
+	.word	4275
 	.byte	10
 	.byte	'_Ifx_SRC_VADC_G',0,4,212,5,25,16,13
 	.byte	'SR0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'SR1',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'SR2',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,13
 	.byte	'SR3',0
-	.word	860
+	.word	814
 	.byte	4,2,35,12,0,14
-	.word	4347
+	.word	4301
 	.byte	17
 	.byte	'Ifx_SRC_VADC_G',0,4,218,5,3
-	.word	4422
+	.word	4376
 	.byte	10
 	.byte	'_Ifx_SRC_VADC_FC',0,4,237,5,25,4,13
 	.byte	'SR0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,0,14
-	.word	4451
+	.word	4405
 	.byte	17
 	.byte	'Ifx_SRC_VADC_FC',0,4,240,5,3
-	.word	4488
+	.word	4442
 	.byte	21,64
-	.word	4347
+	.word	4301
 	.byte	22,3,0,14
-	.word	4518
+	.word	4472
 	.byte	21,64
-	.word	553
+	.word	507
 	.byte	22,63,0,14
-	.word	4347
+	.word	4301
 	.byte	14
-	.word	4347
+	.word	4301
 	.byte	14
-	.word	4347
+	.word	4301
 	.byte	14
-	.word	4347
+	.word	4301
 	.byte	21,16
-	.word	4451
+	.word	4405
 	.byte	22,3,0,14
-	.word	4561
+	.word	4515
 	.byte	21,16
-	.word	553
+	.word	507
 	.byte	22,15,0,21,32
-	.word	4347
+	.word	4301
 	.byte	22,1,0,14
-	.word	4584
+	.word	4538
 	.byte	10
 	.byte	'_Ifx_SRC_VADC',0,4,128,6,25,128,2,13
 	.byte	'G',0
-	.word	4527
+	.word	4481
 	.byte	64,2,35,0,13
 	.byte	'reserved_40',0
-	.word	4532
+	.word	4486
 	.byte	64,2,35,64,13
 	.byte	'G8',0
-	.word	4541
+	.word	4495
 	.byte	16,3,35,128,1,13
 	.byte	'G9',0
-	.word	4546
+	.word	4500
 	.byte	16,3,35,144,1,13
 	.byte	'G10',0
-	.word	4551
+	.word	4505
 	.byte	16,3,35,160,1,13
 	.byte	'G11',0
-	.word	4556
+	.word	4510
 	.byte	16,3,35,176,1,13
 	.byte	'FC',0
-	.word	4570
+	.word	4524
 	.byte	16,3,35,192,1,13
 	.byte	'reserved_D0',0
-	.word	4575
+	.word	4529
 	.byte	16,3,35,208,1,13
 	.byte	'CG',0
-	.word	4593
+	.word	4547
 	.byte	32,3,35,224,1,0,14
-	.word	4598
+	.word	4552
 	.byte	17
 	.byte	'Ifx_SRC_VADC',0,4,139,6,3
-	.word	4754
+	.word	4708
 	.byte	10
 	.byte	'_Ifx_SRC_DSADC_DSADC',0,4,154,6,25,8,13
 	.byte	'SRM',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'SRA',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,0,14
-	.word	4781
+	.word	4735
 	.byte	17
 	.byte	'Ifx_SRC_DSADC_DSADC',0,4,158,6,3
-	.word	4835
+	.word	4789
 	.byte	21,48
-	.word	4781
+	.word	4735
 	.byte	22,5,0,14
-	.word	4869
+	.word	4823
 	.byte	10
 	.byte	'_Ifx_SRC_DSADC',0,4,173,6,25,48,13
 	.byte	'DSADC',0
-	.word	4878
+	.word	4832
 	.byte	48,2,35,0,0,14
-	.word	4883
+	.word	4837
 	.byte	17
 	.byte	'Ifx_SRC_DSADC',0,4,176,6,3
-	.word	4920
+	.word	4874
 	.byte	21,8
-	.word	553
+	.word	507
 	.byte	22,7,0,10
 	.byte	'_Ifx_SRC_ERAY_ERAY',0,4,191,6,25,48,13
 	.byte	'INT0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'INT1',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'TINT0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,13
 	.byte	'TINT1',0
-	.word	860
+	.word	814
 	.byte	4,2,35,12,13
 	.byte	'NDAT0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,16,13
 	.byte	'NDAT1',0
-	.word	860
+	.word	814
 	.byte	4,2,35,20,13
 	.byte	'MBSC0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,24,13
 	.byte	'MBSC1',0
-	.word	860
+	.word	814
 	.byte	4,2,35,28,13
 	.byte	'OBUSY',0
-	.word	860
+	.word	814
 	.byte	4,2,35,32,13
 	.byte	'IBUSY',0
-	.word	860
+	.word	814
 	.byte	4,2,35,36,13
 	.byte	'reserved_28',0
-	.word	4948
+	.word	4902
 	.byte	8,2,35,40,0,14
-	.word	4957
+	.word	4911
 	.byte	17
 	.byte	'Ifx_SRC_ERAY_ERAY',0,4,204,6,3
-	.word	5152
+	.word	5106
 	.byte	21,48
-	.word	4957
+	.word	4911
 	.byte	22,0,0,14
-	.word	5184
+	.word	5138
 	.byte	10
 	.byte	'_Ifx_SRC_ERAY',0,4,219,6,25,48,13
 	.byte	'ERAY',0
-	.word	5193
+	.word	5147
 	.byte	48,2,35,0,0,14
-	.word	5198
+	.word	5152
 	.byte	17
 	.byte	'Ifx_SRC_ERAY',0,4,222,6,3
-	.word	5233
+	.word	5187
 	.byte	10
 	.byte	'_Ifx_SRC_HSM_HSM',0,4,237,6,25,8,13
 	.byte	'HSM',0
-	.word	1726
+	.word	1680
 	.byte	8,2,35,0,0,14
-	.word	5260
+	.word	5214
 	.byte	17
 	.byte	'Ifx_SRC_HSM_HSM',0,4,240,6,3
-	.word	5297
+	.word	5251
 	.byte	21,8
-	.word	5260
+	.word	5214
 	.byte	22,0,0,14
-	.word	5327
+	.word	5281
 	.byte	10
 	.byte	'_Ifx_SRC_HSM',0,4,255,6,25,8,13
 	.byte	'HSM',0
-	.word	5336
+	.word	5290
 	.byte	8,2,35,0,0,14
-	.word	5341
+	.word	5295
 	.byte	17
 	.byte	'Ifx_SRC_HSM',0,4,130,7,3
-	.word	5374
+	.word	5328
 	.byte	10
 	.byte	'_Ifx_SRC_SCU',0,4,145,7,25,16,13
 	.byte	'SCUERU',0
-	.word	3204
+	.word	3158
 	.byte	16,2,35,0,0,14
-	.word	5400
+	.word	5354
 	.byte	17
 	.byte	'Ifx_SRC_SCU',0,4,148,7,3
-	.word	5436
+	.word	5390
 	.byte	10
 	.byte	'_Ifx_SRC_PMS_PMS',0,4,163,7,25,4,13
 	.byte	'SR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,0,14
-	.word	5462
+	.word	5416
 	.byte	17
 	.byte	'Ifx_SRC_PMS_PMS',0,4,166,7,3
-	.word	5498
+	.word	5452
 	.byte	21,16
-	.word	5462
+	.word	5416
 	.byte	22,3,0,14
-	.word	5528
+	.word	5482
 	.byte	10
 	.byte	'_Ifx_SRC_PMS',0,4,181,7,25,16,13
 	.byte	'PMS',0
-	.word	5537
+	.word	5491
 	.byte	16,2,35,0,0,14
-	.word	5542
+	.word	5496
 	.byte	17
 	.byte	'Ifx_SRC_PMS',0,4,184,7,3
-	.word	5575
+	.word	5529
 	.byte	21,12
-	.word	860
+	.word	814
 	.byte	22,2,0,10
 	.byte	'_Ifx_SRC_SMU_SMU',0,4,199,7,25,12,13
 	.byte	'SR',0
-	.word	5601
+	.word	5555
 	.byte	12,2,35,0,0,14
-	.word	5610
+	.word	5564
 	.byte	17
 	.byte	'Ifx_SRC_SMU_SMU',0,4,202,7,3
-	.word	5646
+	.word	5600
 	.byte	21,12
-	.word	5610
+	.word	5564
 	.byte	22,0,0,14
-	.word	5676
+	.word	5630
 	.byte	10
 	.byte	'_Ifx_SRC_SMU',0,4,217,7,25,12,13
 	.byte	'SMU',0
-	.word	5685
+	.word	5639
 	.byte	12,2,35,0,0,14
-	.word	5690
+	.word	5644
 	.byte	17
 	.byte	'Ifx_SRC_SMU',0,4,220,7,3
-	.word	5723
+	.word	5677
 	.byte	21,32
-	.word	860
+	.word	814
 	.byte	22,7,0,10
 	.byte	'_Ifx_SRC_PSI5_PSI5',0,4,235,7,25,32,13
 	.byte	'SR',0
-	.word	5749
+	.word	5703
 	.byte	32,2,35,0,0,14
-	.word	5758
+	.word	5712
 	.byte	17
 	.byte	'Ifx_SRC_PSI5_PSI5',0,4,238,7,3
-	.word	5796
+	.word	5750
 	.byte	21,32
-	.word	5758
+	.word	5712
 	.byte	22,0,0,14
-	.word	5828
+	.word	5782
 	.byte	10
 	.byte	'_Ifx_SRC_PSI5',0,4,253,7,25,32,13
 	.byte	'PSI5',0
-	.word	5837
+	.word	5791
 	.byte	32,2,35,0,0,14
-	.word	5842
+	.word	5796
 	.byte	17
 	.byte	'Ifx_SRC_PSI5',0,4,128,8,3
-	.word	5877
+	.word	5831
 	.byte	10
 	.byte	'_Ifx_SRC_DAM_DAM',0,4,143,8,25,24,13
 	.byte	'LI0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,0,13
 	.byte	'RI0',0
-	.word	860
+	.word	814
 	.byte	4,2,35,4,13
 	.byte	'LI1',0
-	.word	860
+	.word	814
 	.byte	4,2,35,8,13
 	.byte	'RI1',0
-	.word	860
+	.word	814
 	.byte	4,2,35,12,13
 	.byte	'DR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,16,13
 	.byte	'ERR',0
-	.word	860
+	.word	814
 	.byte	4,2,35,20,0,14
-	.word	5904
+	.word	5858
 	.byte	17
 	.byte	'Ifx_SRC_DAM_DAM',0,4,151,8,3
-	.word	6005
+	.word	5959
 	.byte	21,24
-	.word	5904
+	.word	5858
 	.byte	22,0,0,14
-	.word	6035
+	.word	5989
 	.byte	10
 	.byte	'_Ifx_SRC_DAM',0,4,166,8,25,24,13
 	.byte	'DAM',0
-	.word	6044
+	.word	5998
 	.byte	24,2,35,0,0,14
-	.word	6049
+	.word	6003
 	.byte	17
 	.byte	'Ifx_SRC_DAM',0,4,169,8,3
-	.word	6082
+	.word	6036
 	.byte	10
 	.byte	'_Ifx_SRC_PSI5S_PSI5S',0,4,184,8,25,32,13
 	.byte	'SR',0
-	.word	5749
+	.word	5703
 	.byte	32,2,35,0,0,14
-	.word	6108
+	.word	6062
 	.byte	17
 	.byte	'Ifx_SRC_PSI5S_PSI5S',0,4,187,8,3
-	.word	6148
+	.word	6102
 	.byte	21,32
-	.word	6108
+	.word	6062
 	.byte	22,0,0,14
-	.word	6182
+	.word	6136
 	.byte	10
 	.byte	'_Ifx_SRC_PSI5S',0,4,202,8,25,32,13
 	.byte	'PSI5S',0
-	.word	6191
+	.word	6145
 	.byte	32,2,35,0,0,14
-	.word	6196
+	.word	6150
 	.byte	17
 	.byte	'Ifx_SRC_PSI5S',0,4,205,8,3
-	.word	6233
+	.word	6187
 	.byte	10
 	.byte	'_Ifx_SRC_GPSR_GPSR',0,4,220,8,25,32,13
 	.byte	'SR',0
-	.word	5749
+	.word	5703
 	.byte	32,2,35,0,0,14
-	.word	6261
+	.word	6215
 	.byte	17
 	.byte	'Ifx_SRC_GPSR_GPSR',0,4,223,8,3
-	.word	6299
+	.word	6253
 	.byte	21,96
-	.word	6261
+	.word	6215
 	.byte	22,2,0,14
-	.word	6331
+	.word	6285
 	.byte	10
 	.byte	'_Ifx_SRC_GPSR',0,4,238,8,25,96,13
 	.byte	'GPSR',0
-	.word	6340
+	.word	6294
 	.byte	96,2,35,0,0,14
-	.word	6345
+	.word	6299
 	.byte	17
 	.byte	'Ifx_SRC_GPSR',0,4,241,8,3
-	.word	6380
+	.word	6334
 .L8:
 	.byte	21,224,1
-	.word	904
+	.word	858
 	.byte	22,55,0,0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
@@ -1041,21 +1041,21 @@ IfxEvadc_cfg_srcAddresses:	.type	object
 	.word	.L12-.L11
 .L11:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg',0
 	.byte	0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsTasking.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsTasking.h',0
 	.byte	0,0,0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h',0
 	.byte	0,0,0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Src\\Std\\IfxSrc.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Src\\Std\\IfxSrc.h',0
 	.byte	0,0,0
 	.byte	'IfxSrc_regdef.h',0,1,0,0
 	.byte	'../Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.c',0,0,0,0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\_Impl\\IfxSrc_cfg.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\_Impl\\IfxSrc_cfg.h',0
 	.byte	0,0,0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0
 	.byte	0,0,0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitzAllExamplesAurix\\\\AURIX_code_examples\\\\code_examples\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Ifx_Types.h',0
+	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Ifx_Types.h',0
 	.byte	0,0,0
 	.byte	'Ifx_TypesReg.h',0,1,0,0,0
 .L12:
@@ -1063,13 +1063,13 @@ IfxEvadc_cfg_srcAddresses:	.type	object
 	.sdecl	'.debug_info',debug,cluster('IfxEvadc_cfg_srcAddresses')
 	.sect	'.debug_info'
 .L6:
-	.word	337
+	.word	291
 	.half	3
 	.word	.L7
 	.byte	4,1
 	.byte	'../Libraries/iLLD/TC37A/Tricore/_Impl/IfxEvadc_cfg.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitzAllExamplesAurix\\AURIX_code_examples\\code_examples\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
+	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
 	.byte	12,1,2
 	.word	.L2
 	.byte	3
