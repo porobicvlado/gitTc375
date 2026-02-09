@@ -68,6 +68,7 @@
 "Libraries/iLLD/TC37A/Tricore/_Impl/IfxSmu_cfg.o"
 "Libraries/iLLD/TC37A/Tricore/_Impl/IfxSrc_cfg.o"
 "Libraries/iLLD/TC37A/Tricore/_Impl/IfxStm_cfg.o"
+"Libraries/iLLD/TC37A/Tricore/Stm/Std/IfxStm.o"
 "Libraries/iLLD/TC37A/Tricore/Src/Std/IfxSrc.o"
 "Libraries/iLLD/TC37A/Tricore/Scu/Std/IfxScuCcu.o"
 "Libraries/iLLD/TC37A/Tricore/Scu/Std/IfxScuEru.o"

@@ -37,6 +37,17 @@ McmcanType                  g_mcmcan;                       /* Global MCMCAN con
 IfxPort_Pin_Config          g_led1;                         /* Global LED1 configuration and control structure      */
 IfxPort_Pin_Config          g_led2;                         /* Global LED2 configuration and control structure      */
 
+#if (CAN_MODE != LOOPBACK)
+extern uint32 Counter1;
+
+/* CAN Pin configuration for external communication */
+IFX_CONST IfxCan_Can_Pins Can00_pins = {
+       &IfxCan_TXD00_P20_8_OUT,   IfxPort_OutputMode_pushPull, // CAN00_TX
+       &IfxCan_RXD00B_P20_7_IN,   IfxPort_InputMode_pullUp,    // CAN00_RX
+       IfxPort_PadDriver_cmosAutomotiveSpeed4
+};
+#endif
+
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
 /*********************************************************************************************************************/
@@ -62,8 +73,13 @@ void canIsrTxHandler(void)
     /* Clear the "Transmission Completed" interrupt flag */
     IfxCan_Node_clearInterruptFlag(g_mcmcan.canSrcNode.node, IfxCan_Interrupt_transmissionCompleted);
 
+#if (CAN_MODE == LOOPBACK)
     /* Just to indicate that the CAN message has been transmitted by turning on LED1 */
     IfxPort_setPinLow(g_led1.port, g_led1.pinIndex);
+#else
+    /* Just to indicate that the CAN message has been transmitted by toggling LED1 */
+    IfxPort_togglePin(g_led1.port, g_led1.pinIndex);
+#endif
 }
 
 /* Interrupt Service Routine (ISR) called once the RX interrupt has been generated.
@@ -78,6 +94,7 @@ void canIsrRxHandler(void)
     /* Read the received CAN message */
     IfxCan_Can_readMessage(&g_mcmcan.canDstNode, &g_mcmcan.rxMsg, g_mcmcan.rxData);
 
+#if (CAN_MODE == LOOPBACK)
     /* Check if the received data matches with the transmitted one */
     if( ( g_mcmcan.rxData[0] == g_mcmcan.txData[0] ) &&
         ( g_mcmcan.rxData[1] == g_mcmcan.txData[1] ) &&
@@ -86,7 +103,34 @@ void canIsrRxHandler(void)
         /* Turn on the LED2 to indicate correctness of the received message */
         IfxPort_setPinLow(g_led2.port, g_led2.pinIndex);
     }
+#else
+    /* Confirm reception */
+    IfxPort_togglePin(g_led2.port, g_led2.pinIndex);
+#endif
 }
+
+#if (CAN_MODE != LOOPBACK)
+/*----------------------------------TRANSCEIVER INITIALIZATION-------------------------------------------
+ *
+ * This function performs the initialization of the CAN transceiver; see schematic pin P20.6.
+ * Without the transceiver, the intended CAN communication will not function.
+ *
+ * Unlike Loop-Back mode, where transceiver initialization is not required, this initialization
+ * is mandatory here because CAN messages are expected from the physical CAN bus.
+ *
+ *--------------------------------------------------------------------------------------------------------
+ */
+void Driver_Port_Init(void)
+{
+    IfxPort_Pin_Config  pin26;
+
+    pin26.port=&MODULE_P20;
+    pin26.pinIndex=6;
+
+    IfxPort_setPinModeOutput(pin26.port, pin26.pinIndex, IfxPort_OutputMode_pushPull, IfxPort_OutputIdx_general);
+    IfxPort_setPinLow(pin26.port, pin26.pinIndex);
+}
+#endif
 
 /* Function to initialize MCMCAN module and nodes related for this application use case */
 void initMcmcan(void)
@@ -102,6 +146,7 @@ void initMcmcan(void)
 
     IfxCan_Can_initModule(&g_mcmcan.canModule, &g_mcmcan.canConfig);
 
+#if (CAN_MODE == LOOPBACK)
     /* ==========================================================================================
      * Source CAN node configuration and initialization:
      * ==========================================================================================
@@ -166,6 +211,76 @@ void initMcmcan(void)
 
     IfxCan_Can_initNode(&g_mcmcan.canDstNode, &g_mcmcan.canNodeConfig);
 
+#else  /* TWO_CONTROLLER_MODE_1 or TWO_CONTROLLER_MODE_2 */
+    /* ==========================================================================================
+     * Source CAN node configuration and initialization:
+     * ==========================================================================================
+     *  - load default CAN node configuration into configuration structure
+     *
+     *  - assign source CAN node to CAN node 0
+     *
+     *  - define the frame to be the transmitting one
+     *
+     *  - once the transmission is completed, raise the interrupt
+     *  - define the transmission complete interrupt priority
+     *  - assign the interrupt line 0 to the transmission complete interrupt
+     *  - transmission complete interrupt service routine should be serviced by the CPU0
+     *
+     *  - initialize the source CAN node with the modified configuration
+     * ==========================================================================================
+     */
+    IfxCan_Can_initNodeConfig(&g_mcmcan.canNodeConfig, &g_mcmcan.canModule);
+
+    g_mcmcan.canNodeConfig.busLoopbackEnabled = FALSE;
+    g_mcmcan.canNodeConfig.nodeId = IfxCan_NodeId_0;
+
+    g_mcmcan.canNodeConfig.frame.type = IfxCan_FrameType_transmitAndReceive;
+
+    g_mcmcan.canNodeConfig.interruptConfig.transmissionCompletedEnabled = TRUE;
+    g_mcmcan.canNodeConfig.interruptConfig.traco.priority = ISR_PRIORITY_CAN_TX;
+    g_mcmcan.canNodeConfig.interruptConfig.traco.interruptLine = IfxCan_InterruptLine_0;
+    g_mcmcan.canNodeConfig.interruptConfig.traco.typeOfService = IfxSrc_Tos_cpu0;
+
+    // Additional:
+    g_mcmcan.canNodeConfig.pins = &Can00_pins;
+
+    IfxCan_Can_initNode(&g_mcmcan.canSrcNode, &g_mcmcan.canNodeConfig);
+
+    /* ==========================================================================================
+     * Destination CAN node configuration and initialization:
+     * ==========================================================================================
+     *  - load default CAN node configuration into configuration structure
+     *
+     *  - assign destination CAN node to CAN node 1
+     *
+     *  - define the frame to be the receiving one
+     *
+     *  - once the message is stored in the dedicated RX buffer, raise the interrupt
+     *  - define the receive interrupt priority
+     *  - assign the interrupt line 1 to the receive interrupt
+     *  - receive interrupt service routine should be serviced by the CPU0
+     *
+     *  - initialize the destination CAN node with the modified configuration
+     * ==========================================================================================
+     */
+
+    /* The same Node is used both for Tx and Rx ! (PoVl): same config, i.e. pins, etc are used for Destination Node */
+
+   // IfxCan_Can_initNodeConfig(&g_mcmcan.canNodeConfig, &g_mcmcan.canModule);
+
+    g_mcmcan.canNodeConfig.busLoopbackEnabled = FALSE;
+    g_mcmcan.canNodeConfig.nodeId = IfxCan_NodeId_0;
+
+    g_mcmcan.canNodeConfig.frame.type = IfxCan_FrameType_transmitAndReceive;
+
+    g_mcmcan.canNodeConfig.interruptConfig.messageStoredToDedicatedRxBufferEnabled = TRUE;
+    g_mcmcan.canNodeConfig.interruptConfig.reint.priority = ISR_PRIORITY_CAN_RX;
+    g_mcmcan.canNodeConfig.interruptConfig.reint.interruptLine = IfxCan_InterruptLine_1;
+    g_mcmcan.canNodeConfig.interruptConfig.reint.typeOfService = IfxSrc_Tos_cpu0;
+
+   IfxCan_Can_initNode(&g_mcmcan.canDstNode, &g_mcmcan.canNodeConfig);
+#endif
+
     /* ==========================================================================================
      * CAN filter configuration and initialization:
      * ==========================================================================================
@@ -179,7 +294,7 @@ void initMcmcan(void)
      */
     g_mcmcan.canFilter.number = 0;
     g_mcmcan.canFilter.elementConfiguration = IfxCan_FilterElementConfiguration_storeInRxBuffer;
-    g_mcmcan.canFilter.id1 = CAN_MESSAGE_ID;
+    g_mcmcan.canFilter.id1 = CAN_MESSAGE_ID2;
     g_mcmcan.canFilter.rxBufferOffset = IfxCan_RxBufferId_0;
 
     IfxCan_Can_setStandardFilter(&g_mcmcan.canDstNode, &g_mcmcan.canFilter);
@@ -200,11 +315,16 @@ void transmitCanMessage(void)
     IfxCan_Can_initMessage(&g_mcmcan.txMsg);
 
     /* Define the content of the data to be transmitted */
+#if (CAN_MODE == LOOPBACK)
     g_mcmcan.txData[0] = TX_DATA_LOW_WORD;
+#else
+    g_mcmcan.txData[0] = Counter1;
+#endif
+
     g_mcmcan.txData[1] = TX_DATA_HIGH_WORD;
 
     /* Set the message ID that is used during the receive acceptance phase */
-    g_mcmcan.txMsg.messageId = CAN_MESSAGE_ID;
+    g_mcmcan.txMsg.messageId = CAN_MESSAGE_ID1;
 
     /* Send the CAN message with the previously defined TX message content */
     while( IfxCan_Status_notSentBusy ==
@@ -247,3 +367,14 @@ void initLeds(void)
     IfxPort_setPinPadDriver(g_led1.port, g_led1.pinIndex, g_led1.padDriver);
     IfxPort_setPinPadDriver(g_led2.port, g_led2.pinIndex, g_led2.padDriver);
 }
+
+#if (CAN_MODE != LOOPBACK)
+/* Function to wait before sending new message */
+void appWaitMilliseconds(uint32 milliseconds)
+{
+    Ifx_TickTime ticksPerMs  = STM_FREQ_HZ / 1000ULL;
+    Ifx_TickTime ticksToWait = (Ifx_TickTime)milliseconds * ticksPerMs;
+
+    IfxStm_waitTicks(&MODULE_STM0, ticksToWait);
+}
+#endif

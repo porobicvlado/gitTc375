@@ -24,6 +24,8 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
  * IN THE SOFTWARE.
  *********************************************************************************************************************/
+
+#if (CAN_MODE == LOOPBACK)
  /*\title MCMCAN data transmission
  * \abstract MCMCAN is used to exchange data between two nodes, implemented in the same device using Loop-Back mode.
  * \description A CAN message is sent from CAN node 0 to CAN node 1 using Loop-Back mode. After the CAN message
@@ -41,12 +43,35 @@
  * \documents https://www.infineon.com/aurix-expert-training/TC37A_iLLD_UM_1_0_1_17_0.chm
  * \lastUpdated 2024-03-21
  *********************************************************************************************************************/
+#else
+/* -----------------------------------GENERAL SOFTWARE DESCRIPTION------------------------------------------------------
+ *
+ * TWO MESSAGE OBJECTS (MOs) ARE USED: ONE FOR TRANSMITTING AND ONE FOR RECEIVING CAN MESSAGES.
+ * EACH MO IS CONFIGURED AS TRANSMIT OR RECEIVE, WITH THE EXPECTED MESSAGE ID ON THE BUS.
+ *
+ * THE TRANSMIT MO SENDS MESSAGES PERIODICALLY USING THE transmitCanMessage() FUNCTION.
+ * THE CONTENT OF THE TRANSMITTED MESSAGE CAN BE UPDATED BEFORE EACH TRANSMISSION.
+ *
+ * THE RECEIVE MO STORES MESSAGES RECEIVED FROM THE OTHER CONTROLLER.
+ * RECEIVED MESSAGES ARE COMPARED TO THE TRANSMITTED MESSAGE TO CONFIRM CORRECT RECEPTION.
+ *
+ * FOR ADDITIONAL DEBUGGING, THE REGISTERS MOSTAT1 AND MOSTAT2 CAN BE CHECKED,
+ * AS THEY CONTAIN BIT STATES REQUIRED FOR PROPER CAN OPERATION.
+ * THE REGISTERS CONTAINING SENT AND RECEIVED MESSAGES ARE CAN_MODATAH AND CAN_MODATAL.
+ */
+#endif
+
 #include "Ifx_Types.h"
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
 #include "MCMCAN.h"
 
 IFX_ALIGN(4) IfxCpu_syncEvent g_cpuSyncEvent = 0;
+
+#if (CAN_MODE != LOOPBACK)
+uint32 Counter1 = 0;
+uint8 FlagTransmitMessage = 0;
+#endif
 
 void core0_main(void)
 {
@@ -63,12 +88,25 @@ void core0_main(void)
     IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
     
     /* Application code: initialization of MCMCAN module, LEDs and the transmission of the CAN message */
+#if (CAN_MODE != LOOPBACK)
+    Driver_Port_Init();
+#endif
+
     initMcmcan();
     initLeds();
+
+#if (CAN_MODE == LOOPBACK)
     transmitCanMessage();
+#else
+    while(1)
+    {
+        Counter1++;
+        transmitCanMessage();
+        appWaitMilliseconds(1000);
+    }
+#endif
 
     while(1)
     {
     }
 }
-
