@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include Libraries/iLLD/TC37A/Tricore/_PinMap/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/_Impl/subdir.mk
+-include Libraries/iLLD/TC37A/Tricore/Stm/Std/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/Src/Std/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/Scu/Std/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/Port/Std/subdir.mk

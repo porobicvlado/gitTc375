@@ -38,11 +38,45 @@
 #include "IfxCan.h"
 #include "IfxCpu_Irq.h"
 #include "IfxPort.h"                                        /* For GPIO Port Pin Control                            */
+#include "IfxStm.h"
+
+/*********************************************************************************************************************/
+/*--------------------------------------MODE SELECTION MACRO---------------------------------------------------------*/
+/*********************************************************************************************************************/
+/*
+ * CAN_MODE:
+ * - Set to LOOPBACK for internal communication between two nodes
+ * - Set to TWO_CONTROLLER_MODE_1 for Board 1 (TX: 0x777, RX: 0x888)
+ * - Set to TWO_CONTROLLER_MODE_2 for Board 2 (TX: 0x888, RX: 0x777)
+ */
+
+/* Mode definitions */
+#define LOOPBACK                    0
+#define TWO_CONTROLLER_MODE_1       1
+#define TWO_CONTROLLER_MODE_2       2
+
+/* Select mode here */
+#define CAN_MODE                    TWO_CONTROLLER_MODE_2       /* Change this value to switch between modes */
 
 /*********************************************************************************************************************/
 /*------------------------------------------------------Macros-------------------------------------------------------*/
 /*********************************************************************************************************************/
-#define CAN_MESSAGE_ID              (uint32)0x777           /* Message ID that will be used in arbitration phase    */
+
+/* Message ID configuration based on selected mode */
+#if (CAN_MODE == LOOPBACK)
+    #define CAN_MESSAGE_ID1         (uint32)0x777           /* TX Message ID (same for loopback)                    */
+    #define CAN_MESSAGE_ID2         (uint32)0x777           /* RX Message ID (same for loopback)                    */
+
+#elif (CAN_MODE == TWO_CONTROLLER_MODE_1)
+    #define CAN_MESSAGE_ID1         (uint32)0x777           /* TX ID for Board 1                                    */
+    #define CAN_MESSAGE_ID2         (uint32)0x888           /* RX ID for Board 1                                    */
+
+#elif (CAN_MODE == TWO_CONTROLLER_MODE_2)
+    #define CAN_MESSAGE_ID1         (uint32)0x888           /* TX ID for Board 2                                    */
+    #define CAN_MESSAGE_ID2         (uint32)0x777           /* RX ID for Board 2                                    */
+#endif
+
+/* Common macros */
 #define PIN5                        5                       /* LED1 used in TX ISR is connected to this pin         */
 #define PIN6                        6                       /* LED2 used in RX ISR is connected to this pin         */
 #define INVALID_RX_DATA_VALUE       0xA5                    /* Used to invalidate RX message data content           */
@@ -52,6 +86,7 @@
 #define TX_DATA_LOW_WORD            (uint32)0xC0CAC01A      /* Define CAN data lower word to be transmitted         */
 #define TX_DATA_HIGH_WORD           (uint32)0xBA5EBA11      /* Define CAN data higher word to be transmitted        */
 #define MAXIMUM_CAN_DATA_PAYLOAD    2                       /* Define maximum classical CAN payload in 4-byte words */
+#define STM_FREQ_HZ                 100000000ULL
 
 /*********************************************************************************************************************/
 /*--------------------------------------------------Data Structures--------------------------------------------------*/
@@ -76,5 +111,10 @@ typedef struct
 void initMcmcan(void);
 void transmitCanMessage(void);
 void initLeds(void);
+
+#if (CAN_MODE != LOOPBACK)
+void Driver_Port_Init(void);
+void appWaitMilliseconds(uint32 milliseconds);
+#endif
 
 #endif /* MCMCAN_H_ */
