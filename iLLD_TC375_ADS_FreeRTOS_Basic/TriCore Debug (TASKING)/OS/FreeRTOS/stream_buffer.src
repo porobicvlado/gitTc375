@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc11924a --dep-file=OS/FreeRTOS/stream_buffer.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -IC:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o OS/FreeRTOS/stream_buffer.src ../OS/FreeRTOS/stream_buffer.c"
+	.compiler_invocation	"ctc -f cc26764a --dep-file=OS/FreeRTOS/stream_buffer.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Configurations -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Io -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking -ID:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3 -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o OS/FreeRTOS/stream_buffer.src ../OS/FreeRTOS/stream_buffer.c"
 	.compiler_name		"ctc"
 	;source	'../OS/FreeRTOS/stream_buffer.c'
 
@@ -1587,7 +1587,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
 .L178:
-	.word	3817
+	.word	3804
 	.half	3
 	.word	.L179
 	.byte	4
@@ -1595,8 +1595,8 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.byte	1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L180
 .L384:
 	.byte	2
@@ -1607,7 +1607,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 .L306:
 	.byte	4
 	.byte	'ulICR',0,1,167,1,81
-	.word	230
+	.word	217
 .L350:
 	.byte	5,0
 .L302:
@@ -1619,87 +1619,87 @@ __prvInitialiseNewStreamBuffer_function_end:
 .L308:
 	.byte	6
 	.byte	'xPortSetCCPN',0,1,1,174,1,63
-	.word	230
+	.word	217
 	.byte	1,1
 .L310:
 	.byte	4
 	.byte	'ucCCPN',0,1,174,1,91
-	.word	279
+	.word	266
 .L347:
 	.byte	7
 .L312:
 	.byte	8
 	.byte	'xICR',0,1,176,1,14
-	.word	296
+	.word	283
 	.byte	0,0,2
 	.byte	'int',0,4,5,9
 	.byte	'__mtcr',0,1,1,1,1,10
-	.word	370
+	.word	357
 	.byte	10
-	.word	370
+	.word	357
 	.byte	0,11
-	.word	370
+	.word	357
 	.byte	12
 	.byte	'__mfcr',0
-	.word	400
+	.word	387
 	.byte	1,1,1,1,10
-	.word	370
+	.word	357
 	.byte	0,13
 	.byte	'__disable',0,1,1,1,1,13
 	.byte	'__enable',0,1,1,1,1,14
 	.byte	'void',0
 .L353:
 	.byte	15
-	.word	456
+	.word	443
 	.byte	16
-	.word	462
+	.word	449
 	.byte	17
-	.word	456
+	.word	443
 .L318:
 	.byte	15
-	.word	472
+	.word	459
 	.byte	16
-	.word	477
+	.word	464
 	.byte	18
 	.byte	'memcpy',0,2,53,17
-	.word	462
+	.word	449
 	.byte	1,1,1,1,19,2,53,33
-	.word	467
+	.word	454
 	.byte	19,2,53,56
-	.word	482
+	.word	469
 	.byte	19,2,53,68
-	.word	296
+	.word	283
 	.byte	0,18
 	.byte	'memset',0,2,56,17
-	.word	462
+	.word	449
 	.byte	1,1,1,1,19,2,56,33
-	.word	462
+	.word	449
 	.byte	19,2,56,36
-	.word	370
+	.word	357
 	.byte	19,2,56,41
-	.word	296
+	.word	283
 	.byte	0,20
 	.byte	'vPortEnterCritical',0,1,102,13,1,1,1,1,20
 	.byte	'vPortExitCritical',0,1,103,13,1,1,1,1,18
 	.byte	'pvPortMalloc',0,3,175,1,8
-	.word	462
+	.word	449
 	.byte	1,1,1,1,4
 	.byte	'xSize',0,3,175,1,29
-	.word	296
+	.word	283
 	.byte	0,21
 	.byte	'vPortFree',0,3,178,1,6,1,1,1,1,4
 	.byte	'pv',0,3,178,1,24
-	.word	462
+	.word	449
 	.byte	0,20
 	.byte	'vTaskSuspendAll',0,4,218,10,6,1,1,1,1,22
 	.byte	'xTaskResumeAll',0,4,146,11,12
-	.word	230
+	.word	217
 	.byte	1,1,1,1,23
 	.byte	'tskTaskControlBlock',0,4,86,8,1,15
-	.word	755
+	.word	742
 	.byte	24
 	.byte	'TaskHandle_t',0,4,87,38
-	.word	780
+	.word	767
 .L343:
 	.byte	2
 	.byte	'unsigned long int',0,4,7,25,4,107,9,1,26
@@ -1708,439 +1708,439 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.byte	'eIncrement',0,2,26
 	.byte	'eSetValueWithOverwrite',0,3,26
 	.byte	'eSetValueWithoutOverwrite',0,4,0,15
-	.word	296
+	.word	283
 	.byte	18
 	.byte	'xTaskGenericNotify',0,4,148,16,12
-	.word	230
+	.word	217
 	.byte	1,1,1,1,4
 	.byte	'xTaskToNotify',0,4,148,16,45
-	.word	785
+	.word	772
 	.byte	4
 	.byte	'uxIndexToNotify',0,4,149,16,44
-	.word	806
+	.word	793
 	.byte	4
 	.byte	'ulValue',0,4,150,16,41
-	.word	296
+	.word	283
 	.byte	4
 	.byte	'eAction',0,4,151,16,46
-	.word	827
+	.word	814
 	.byte	4
 	.byte	'pulPreviousNotificationValue',0,4,152,16,43
-	.word	922
+	.word	909
 	.byte	0,15
-	.word	755
+	.word	742
 .L424:
 	.byte	15
-	.word	230
+	.word	217
 	.byte	18
 	.byte	'xTaskGenericNotifyFromISR',0,4,172,17,12
-	.word	230
+	.word	217
 	.byte	1,1,1,1,4
 	.byte	'xTaskToNotify',0,4,172,17,52
-	.word	785
+	.word	772
 	.byte	4
 	.byte	'uxIndexToNotify',0,4,173,17,51
-	.word	806
+	.word	793
 	.byte	4
 	.byte	'ulValue',0,4,174,17,48
-	.word	296
+	.word	283
 	.byte	4
 	.byte	'eAction',0,4,175,17,53
-	.word	827
+	.word	814
 	.byte	4
 	.byte	'pulPreviousNotificationValue',0,4,176,17,50
-	.word	922
+	.word	909
 	.byte	4
 	.byte	'pxHigherPriorityTaskWoken',0,4,177,17,52
-	.word	1085
+	.word	1072
 	.byte	0,18
 	.byte	'xTaskGenericNotifyWait',0,4,188,18,12
-	.word	230
+	.word	217
 	.byte	1,1,1,1,4
 	.byte	'uxIndexToWaitOn',0,4,188,18,48
-	.word	806
+	.word	793
 	.byte	4
 	.byte	'ulBitsToClearOnEntry',0,4,189,18,45
-	.word	296
+	.word	283
 	.byte	4
 	.byte	'ulBitsToClearOnExit',0,4,190,18,45
-	.word	296
+	.word	283
 	.byte	4
 	.byte	'pulNotificationValue',0,4,191,18,47
-	.word	922
+	.word	909
 	.byte	4
 	.byte	'xTicksToWait',0,4,192,18,47
-	.word	296
+	.word	283
 	.byte	0,18
 	.byte	'xTaskGenericNotifyStateClear',0,4,141,21,12
-	.word	230
+	.word	217
 	.byte	1,1,1,1,4
 	.byte	'xTask',0,4,141,21,55
-	.word	785
+	.word	772
 	.byte	4
 	.byte	'uxIndexToClear',0,4,142,21,54
-	.word	806
+	.word	793
 	.byte	0
 .L327:
 	.byte	27
 	.byte	'xTIME_OUT',0,4,119,16,8,28
 	.byte	'xOverflowCount',0
-	.word	230
+	.word	217
 	.byte	4,2,35,0,28
 	.byte	'xTimeOnEntering',0
-	.word	296
+	.word	283
 	.byte	4,2,35,4,0,15
-	.word	1540
+	.word	1527
 	.byte	17
-	.word	1605
+	.word	1592
 	.byte	21
 	.byte	'vTaskSetTimeOutState',0,4,228,21,6,1,1,1,1,4
 	.byte	'pxTimeOut',0,4,228,21,46
-	.word	1610
+	.word	1597
 	.byte	0,17
-	.word	1605
+	.word	1592
 	.byte	15
-	.word	296
+	.word	283
 	.byte	17
-	.word	1670
+	.word	1657
 	.byte	18
 	.byte	'xTaskCheckForTimeOut',0,4,185,22,12
-	.word	230
+	.word	217
 	.byte	1,1,1,1,4
 	.byte	'pxTimeOut',0,4,185,22,52
-	.word	1665
+	.word	1652
 	.byte	4
 	.byte	'pxTicksToWait',0,4,186,22,53
-	.word	1675
+	.word	1662
 	.byte	0,22
 	.byte	'xTaskGetCurrentTaskHandle',0,4,209,23,14
-	.word	785
+	.word	772
 	.byte	1,1,1,1,11
-	.word	296
+	.word	283
 	.byte	11
-	.word	296
+	.word	283
 	.byte	11
-	.word	785
+	.word	772
 	.byte	11
-	.word	785
+	.word	772
 .L453:
 	.byte	15
-	.word	279
+	.word	266
 	.byte	27
 	.byte	'StreamBufferDef_t',0,5,223,1,16,32,28
 	.byte	'xTail',0
-	.word	1796
+	.word	1783
 	.byte	4,2,35,0,28
 	.byte	'xHead',0
-	.word	1801
+	.word	1788
 	.byte	4,2,35,4,28
 	.byte	'xLength',0
-	.word	296
+	.word	283
 	.byte	4,2,35,8,28
 	.byte	'xTriggerLevelBytes',0
-	.word	296
+	.word	283
 	.byte	4,2,35,12,28
 	.byte	'xTaskWaitingToReceive',0
-	.word	1806
+	.word	1793
 	.byte	4,2,35,16,28
 	.byte	'xTaskWaitingToSend',0
-	.word	1811
+	.word	1798
 	.byte	4,2,35,20,28
 	.byte	'pucBuffer',0
-	.word	1816
+	.word	1803
 	.byte	4,2,35,24,28
 	.byte	'ucFlags',0
-	.word	279
+	.word	266
 	.byte	1,2,35,28,0,15
-	.word	1821
+	.word	1808
 	.byte	15
-	.word	1821
+	.word	1808
 .L316:
 	.byte	24
 	.byte	'StreamBufferHandle_t',0,6,72,36
-	.word	2021
+	.word	2008
 .L382:
 	.byte	15
-	.word	1821
+	.word	1808
 .L322:
 	.byte	17
-	.word	2055
+	.word	2042
 .L334:
 	.byte	17
-	.word	1085
+	.word	1072
 .L336:
 	.byte	17
-	.word	2055
+	.word	2042
 .L357:
 	.byte	17
-	.word	2055
+	.word	2042
 .L366:
 	.byte	17
-	.word	1085
+	.word	1072
 .L368:
 	.byte	17
-	.word	2055
+	.word	2042
 	.byte	17
-	.word	1821
+	.word	1808
 	.byte	15
-	.word	2090
+	.word	2077
 .L389:
 	.byte	17
-	.word	2095
+	.word	2082
 .L393:
 	.byte	17
-	.word	2095
+	.word	2082
 .L399:
 	.byte	17
-	.word	2055
+	.word	2042
 	.byte	15
-	.word	230
+	.word	217
 	.byte	17
-	.word	2115
+	.word	2102
 	.byte	29,1,1,10
-	.word	2021
+	.word	2008
 	.byte	10
-	.word	230
+	.word	217
 	.byte	10
-	.word	2120
+	.word	2107
 	.byte	0,15
-	.word	2125
+	.word	2112
 	.byte	15
-	.word	2125
+	.word	2112
 .L402:
 	.byte	24
 	.byte	'StreamBufferCallbackFunction_t',0,6,77,17
-	.word	2149
+	.word	2136
 .L407:
 	.byte	17
-	.word	2095
+	.word	2082
 .L413:
 	.byte	17
-	.word	2095
+	.word	2082
 .L419:
 	.byte	17
-	.word	2055
+	.word	2042
 .L426:
 	.byte	17
-	.word	2055
+	.word	2042
 .L438:
 	.byte	17
-	.word	2055
+	.word	2042
 .L458:
 	.byte	17
-	.word	2055
+	.word	2042
 .L464:
 	.byte	17
-	.word	2095
+	.word	2082
 .L468:
 	.byte	17
-	.word	2055
+	.word	2042
 	.byte	17
-	.word	279
+	.word	266
 .L470:
 	.byte	15
-	.word	2233
+	.word	2220
 .L485:
 	.byte	17
-	.word	2055
+	.word	2042
 .L500:
 	.byte	17
-	.word	2055
+	.word	2042
 .L502:
 	.byte	17
-	.word	1816
+	.word	1803
 .L511:
 	.byte	17
-	.word	230
+	.word	217
 	.byte	2
 	.byte	'short int',0,2,5,24
 	.byte	'__wchar_t',0,5,1,1
-	.word	2263
+	.word	2250
 	.byte	24
 	.byte	'__size_t',0,5,1,1
-	.word	296
+	.word	283
 	.byte	24
 	.byte	'__ptrdiff_t',0,5,1,1
-	.word	370
+	.word	357
 	.byte	30,1,15
-	.word	2331
+	.word	2318
 	.byte	24
 	.byte	'__codeptr',0,5,1,1
-	.word	2333
+	.word	2320
 	.byte	24
 	.byte	'__intptr_t',0,5,1,1
-	.word	370
+	.word	357
 	.byte	24
 	.byte	'__uintptr_t',0,5,1,1
-	.word	296
+	.word	283
 	.byte	24
 	.byte	'uint8_t',0,7,242,1,41
-	.word	279
+	.word	266
 	.byte	2
 	.byte	'unsigned short int',0,2,7,24
 	.byte	'uint16_t',0,7,246,1,41
-	.word	2412
+	.word	2399
 	.byte	24
 	.byte	'uint32_t',0,7,254,1,41
-	.word	296
+	.word	283
 	.byte	24
 	.byte	'size_t',0,2,29,25
-	.word	296
+	.word	283
 	.byte	29,1,1,10
-	.word	462
+	.word	449
 	.byte	0,15
-	.word	2485
+	.word	2472
 	.byte	24
 	.byte	'TaskFunction_t',0,8,36,17
-	.word	2494
+	.word	2481
 	.byte	24
 	.byte	'StackType_t',0,1,74,30
-	.word	296
+	.word	283
 	.byte	24
 	.byte	'BaseType_t',0,1,75,30
-	.word	230
+	.word	217
 	.byte	24
 	.byte	'UBaseType_t',0,1,76,30
-	.word	806
+	.word	793
 	.byte	24
 	.byte	'TickType_t',0,1,82,30
-	.word	296
+	.word	283
 	.byte	31,16
-	.word	462
+	.word	449
 	.byte	32,3,0,27
 	.byte	'xSTATIC_LIST_ITEM',0,9,177,9,8,20,28
 	.byte	'xDummy2',0
-	.word	296
+	.word	283
 	.byte	4,2,35,0,28
 	.byte	'pvDummy3',0
-	.word	2600
+	.word	2587
 	.byte	16,2,35,4,0,24
 	.byte	'StaticListItem_t',0,9,188,9,34
-	.word	2609
+	.word	2596
 	.byte	31,8
-	.word	462
+	.word	449
 	.byte	32,1,0,27
 	.byte	'xSTATIC_MINI_LIST_ITEM',0,9,192,9,12,12,28
 	.byte	'xDummy2',0
-	.word	296
+	.word	283
 	.byte	4,2,35,0,28
 	.byte	'pvDummy3',0
-	.word	2695
+	.word	2682
 	.byte	8,2,35,4,0,24
 	.byte	'StaticMiniListItem_t',0,9,200,9,43
-	.word	2704
+	.word	2691
 	.byte	27
 	.byte	'xSTATIC_LIST',0,9,206,9,16,20,28
 	.byte	'uxDummy2',0
-	.word	806
+	.word	793
 	.byte	4,2,35,0,28
 	.byte	'pvDummy3',0
-	.word	462
+	.word	449
 	.byte	4,2,35,4,28
 	.byte	'xDummy4',0
-	.word	2704
+	.word	2691
 	.byte	12,2,35,8,0,24
 	.byte	'StaticList_t',0,9,217,9,3
-	.word	2799
+	.word	2786
 	.byte	31,12
-	.word	462
+	.word	449
 	.byte	32,2,0,33,9,172,10,5,4,28
 	.byte	'pvDummy2',0
-	.word	462
+	.word	449
 	.byte	4,2,35,0,28
 	.byte	'uxDummy2',0
-	.word	806
+	.word	793
 	.byte	4,2,35,0,0,31,40
-	.word	2799
+	.word	2786
 	.byte	32,1,0,31,12
-	.word	806
+	.word	793
 	.byte	32,2,0,31,2
-	.word	279
+	.word	266
 	.byte	32,1,0,27
 	.byte	'xSTATIC_QUEUE',0,9,168,10,16,72,28
 	.byte	'pvDummy1',0
-	.word	2894
+	.word	2881
 	.byte	12,2,35,0,28
 	.byte	'u',0
-	.word	2903
+	.word	2890
 	.byte	4,2,35,12,28
 	.byte	'xDummy3',0
-	.word	2946
+	.word	2933
 	.byte	40,2,35,16,28
 	.byte	'uxDummy4',0
-	.word	2955
+	.word	2942
 	.byte	12,2,35,56,28
 	.byte	'ucDummy5',0
-	.word	2964
+	.word	2951
 	.byte	2,2,35,68,0,24
 	.byte	'StaticQueue_t',0,9,194,10,3
-	.word	2973
+	.word	2960
 	.byte	31,16
-	.word	296
+	.word	283
 	.byte	32,3,0,27
 	.byte	'xSTATIC_STREAM_BUFFER',0,9,138,11,16,32,28
 	.byte	'uxDummy1',0
-	.word	3099
+	.word	3086
 	.byte	16,2,35,0,28
 	.byte	'pvDummy2',0
-	.word	2894
+	.word	2881
 	.byte	12,2,35,16,28
 	.byte	'ucDummy3',0
-	.word	279
+	.word	266
 	.byte	1,2,35,28,0,24
 	.byte	'StaticStreamBuffer_t',0,9,149,11,3
-	.word	3108
+	.word	3095
 	.byte	15
 	.word	.L726-.L178
 	.byte	11
-	.word	806
+	.word	793
 	.byte	15
 	.word	.L726-.L178
 	.byte	27
 	.byte	'xMINI_LIST_ITEM',0,10,157,1,12,12,28
 	.byte	'xItemValue',0
-	.word	296
+	.word	283
 	.byte	4,2,35,0,28
 	.byte	'pxNext',0
-	.word	3221
+	.word	3208
 	.byte	4,2,35,4,28
 	.byte	'pxPrevious',0
-	.word	3221
+	.word	3208
 	.byte	4,2,35,8,0,27
 	.byte	'xLIST',0,10,172,1,16,20,28
 	.byte	'uxNumberOfItems',0
-	.word	3226
+	.word	3213
 	.byte	4,2,35,0,28
 	.byte	'pxIndex',0
-	.word	3231
+	.word	3218
 	.byte	4,2,35,4,28
 	.byte	'xListEnd',0
-	.word	3236
+	.word	3223
 	.byte	12,2,35,8,0,15
-	.word	3315
+	.word	3302
 .L726:
 	.byte	27
 	.byte	'xLIST_ITEM',0,10,144,1,8,20,28
 	.byte	'xItemValue',0
-	.word	296
+	.word	283
 	.byte	4,2,35,0,28
 	.byte	'pxNext',0
-	.word	3221
+	.word	3208
 	.byte	4,2,35,4,28
 	.byte	'pxPrevious',0
-	.word	3221
+	.word	3208
 	.byte	4,2,35,8,28
 	.byte	'pvOwner',0
-	.word	462
+	.word	449
 	.byte	4,2,35,12,28
 	.byte	'pxContainer',0
-	.word	3388
+	.word	3375
 	.byte	4,2,35,16,0,24
 	.byte	'ListItem_t',0,10,154,1,27
-	.word	3393
+	.word	3380
 	.byte	24
 	.byte	'MiniListItem_t',0,10,164,1,36
-	.word	3236
+	.word	3223
 	.byte	25,4,96,9,1,26
 	.byte	'eRunning',0,0,26
 	.byte	'eReady',0,1,26
@@ -2149,29 +2149,29 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.byte	'eDeleted',0,4,26
 	.byte	'eInvalid',0,5,0,24
 	.byte	'eTaskState',0,4,104,3
-	.word	3549
+	.word	3536
 	.byte	24
 	.byte	'eNotifyAction',0,4,114,3
-	.word	827
+	.word	814
 	.byte	24
 	.byte	'TimeOut_t',0,4,123,3
-	.word	1540
+	.word	1527
 	.byte	27
 	.byte	'xMEMORY_REGION',0,4,128,1,16,12,28
 	.byte	'pvBaseAddress',0
-	.word	462
+	.word	449
 	.byte	4,2,35,0,28
 	.byte	'ulLengthInBytes',0
-	.word	296
+	.word	283
 	.byte	4,2,35,4,28
 	.byte	'ulParameters',0
-	.word	296
+	.word	283
 	.byte	4,2,35,8,0,24
 	.byte	'MemoryRegion_t',0,4,133,1,3
-	.word	3680
+	.word	3667
 	.byte	24
 	.byte	'StreamBuffer_t',0,5,242,1,3
-	.word	1821
+	.word	1808
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
@@ -2196,9 +2196,9 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L730-.L729
 .L729:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	'C:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\include',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0
 	.byte	'string.h',0,2,0,0
@@ -2215,14 +2215,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('vPortSetCCPN')
 	.sect	'.debug_info'
 .L181:
-	.word	401
+	.word	374
 	.half	3
 	.word	.L182
 	.byte	4,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L184,.L183
 	.byte	2
 	.word	.L177
@@ -2249,7 +2249,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L734-.L733
 .L733:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0,0
 .L734:
@@ -2280,14 +2280,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('vPortSetICR')
 	.sect	'.debug_info'
 .L186:
-	.word	375
+	.word	348
 	.half	3
 	.word	.L187
 	.byte	4,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L189,.L188
 	.byte	2
 	.word	.L177
@@ -2312,7 +2312,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L745-.L744
 .L744:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0,0
 .L745:
@@ -2335,14 +2335,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xPortSetCCPN')
 	.sect	'.debug_info'
 .L191:
-	.word	385
+	.word	358
 	.half	3
 	.word	.L192
 	.byte	4,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3\\portmacro.h',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L194,.L193
 	.byte	2
 	.word	.L177
@@ -2369,7 +2369,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L752-.L751
 .L751:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'portmacro.h',0,1,0,0,0
 .L752:
@@ -2402,14 +2402,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferSend')
 	.sect	'.debug_info'
 .L196:
-	.word	544
+	.word	531
 	.half	3
 	.word	.L197
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L199,.L198
 	.byte	2
 	.word	.L177
@@ -2583,14 +2583,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferSendFromISR')
 	.sect	'.debug_info'
 .L201:
-	.word	639
+	.word	626
 	.half	3
 	.word	.L202
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L204,.L203
 	.byte	2
 	.word	.L177
@@ -2661,7 +2661,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L792-.L791
 .L791:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0,0,0,0
 	.byte	'portmacro.h',0,1,0,0,0
@@ -2737,14 +2737,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferReceive')
 	.sect	'.debug_info'
 .L206:
-	.word	525
+	.word	512
 	.half	3
 	.word	.L207
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L209,.L208
 	.byte	2
 	.word	.L177
@@ -2880,14 +2880,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferReceiveFromISR')
 	.sect	'.debug_info'
 .L211:
-	.word	673
+	.word	660
 	.half	3
 	.word	.L212
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L214,.L213
 	.byte	2
 	.word	.L177
@@ -2958,7 +2958,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L826-.L825
 .L825:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0,0,0,0
 	.byte	'portmacro.h',0,1,0,0,0
@@ -3032,14 +3032,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('vStreamBufferDelete')
 	.sect	'.debug_info'
 .L216:
-	.word	342
+	.word	329
 	.half	3
 	.word	.L217
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L219,.L218
 	.byte	2
 	.word	.L177
@@ -3097,14 +3097,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferIsFull')
 	.sect	'.debug_info'
 .L221:
-	.word	407
+	.word	394
 	.half	3
 	.word	.L222
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L224,.L223
 	.byte	2
 	.word	.L177
@@ -3180,14 +3180,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferIsEmpty')
 	.sect	'.debug_info'
 .L226:
-	.word	387
+	.word	374
 	.half	3
 	.word	.L227
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L229,.L228
 	.byte	2
 	.word	.L177
@@ -3255,14 +3255,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferReset')
 	.sect	'.debug_info'
 .L231:
-	.word	425
+	.word	412
 	.half	3
 	.word	.L232
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L234,.L233
 	.byte	2
 	.word	.L177
@@ -3353,14 +3353,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferSpacesAvailable')
 	.sect	'.debug_info'
 .L236:
-	.word	402
+	.word	389
 	.half	3
 	.word	.L237
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L239,.L238
 	.byte	2
 	.word	.L177
@@ -3444,14 +3444,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferBytesAvailable')
 	.sect	'.debug_info'
 .L241:
-	.word	375
+	.word	362
 	.half	3
 	.word	.L242
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L244,.L243
 	.byte	2
 	.word	.L177
@@ -3506,14 +3506,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferSetTriggerLevel')
 	.sect	'.debug_info'
 .L246:
-	.word	403
+	.word	390
 	.half	3
 	.word	.L247
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L249,.L248
 	.byte	2
 	.word	.L177
@@ -3585,14 +3585,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferSendCompletedFromISR')
 	.sect	'.debug_info'
 .L251:
-	.word	538
+	.word	525
 	.half	3
 	.word	.L252
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L254,.L253
 	.byte	2
 	.word	.L177
@@ -3649,7 +3649,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L900-.L899
 .L899:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0,0,0,0
 	.byte	'portmacro.h',0,1,0,0,0
@@ -3711,14 +3711,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferReceiveCompletedFromISR')
 	.sect	'.debug_info'
 .L256:
-	.word	541
+	.word	528
 	.half	3
 	.word	.L257
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L259,.L258
 	.byte	2
 	.word	.L177
@@ -3775,7 +3775,7 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.word	.L916-.L915
 .L915:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'C:\\\\Nastava_ESUV\\\\35_Aurix\\\\05_sw_projekti\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
+	.byte	'D:\\\\diplomski\\\\push_inittask\\\\gitTc375\\\\iLLD_TC375_ADS_FreeRTOS_Basic\\\\OS\\\\FreeRTOS\\\\portable\\\\Tasking\\\\TC3',0
 	.byte	0
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0,0,0,0
 	.byte	'portmacro.h',0,1,0,0,0
@@ -3837,14 +3837,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferGenericCreate')
 	.sect	'.debug_info'
 .L261:
-	.word	520
+	.word	507
 	.half	3
 	.word	.L262
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L264,.L263
 	.byte	2
 	.word	.L177
@@ -3947,14 +3947,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('xStreamBufferNextMessageLengthBytes')
 	.sect	'.debug_info'
 .L266:
-	.word	437
+	.word	424
 	.half	3
 	.word	.L267
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L269,.L268
 	.byte	2
 	.word	.L177
@@ -4041,14 +4041,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('prvBytesInBuffer')
 	.sect	'.debug_info'
 .L271:
-	.word	335
+	.word	322
 	.half	3
 	.word	.L272
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L274,.L273
 	.byte	2
 	.word	.L177
@@ -4118,14 +4118,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('prvWriteBytesToBuffer')
 	.sect	'.debug_info'
 .L276:
-	.word	406
+	.word	393
 	.half	3
 	.word	.L277
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L279,.L278
 	.byte	2
 	.word	.L177
@@ -4216,14 +4216,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('prvReadMessageFromBuffer')
 	.sect	'.debug_info'
 .L281:
-	.word	517
+	.word	504
 	.half	3
 	.word	.L282
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L284,.L283
 	.byte	2
 	.word	.L177
@@ -4331,14 +4331,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('prvWriteMessageToBuffer')
 	.sect	'.debug_info'
 .L286:
-	.word	473
+	.word	460
 	.half	3
 	.word	.L287
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L289,.L288
 	.byte	2
 	.word	.L177
@@ -4437,14 +4437,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('prvReadBytesFromBuffer')
 	.sect	'.debug_info'
 .L291:
-	.word	407
+	.word	394
 	.half	3
 	.word	.L292
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L294,.L293
 	.byte	2
 	.word	.L177
@@ -4533,14 +4533,14 @@ __prvInitialiseNewStreamBuffer_function_end:
 	.sdecl	'.debug_info',debug,cluster('prvInitialiseNewStreamBuffer')
 	.sect	'.debug_info'
 .L296:
-	.word	541
+	.word	528
 	.half	3
 	.word	.L297
 	.byte	4,1
 	.byte	'../OS/FreeRTOS/stream_buffer.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Nastava_ESUV\\35_Aurix\\05_sw_projekti\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0
-	.byte	12,1
+	.byte	'D:\\diplomski\\push_inittask\\gitTc375\\iLLD_TC375_ADS_FreeRTOS_Basic\\TriCore Debug (TASKING)\\',0,12
+	.byte	1
 	.word	.L299,.L298
 	.byte	2
 	.word	.L177

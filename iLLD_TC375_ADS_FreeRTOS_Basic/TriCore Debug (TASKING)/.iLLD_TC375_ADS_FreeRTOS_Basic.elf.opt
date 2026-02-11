@@ -113,6 +113,7 @@
 "Configurations/Ifx_Cfg_SswBmhd.o"
 "App_Led1.o"
 "App_Led2.o"
+"App_SystemInit.o"
 "Cpu0_Main.o"
 "Cpu1_Main.o"
 "Cpu2_Main.o"

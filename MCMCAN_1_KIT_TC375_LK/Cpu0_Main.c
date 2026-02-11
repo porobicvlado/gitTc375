@@ -68,10 +68,10 @@
 
 IFX_ALIGN(4) IfxCpu_syncEvent g_cpuSyncEvent = 0;
 
-#if (CAN_MODE != LOOPBACK)
+
 uint32 Counter1 = 0;
 uint8 FlagTransmitMessage = 0;
-#endif
+
 
 void core0_main(void)
 {
@@ -96,13 +96,20 @@ void core0_main(void)
     initLeds();
 
 #if (CAN_MODE == LOOPBACK)
-    transmitCanMessage();
+    if(FlagTransmitMessage == 1)
+    {
+        transmitCanMessage();
+        FlagTransmitMessage = 0;
+    }
 #else
     while(1)
     {
         Counter1++;
+        if(FlagTransmitMessage == 1)
+        {
         transmitCanMessage();
-        appWaitMilliseconds(1000);
+        FlagTransmitMessage = 0;
+        }
     }
 #endif
 
