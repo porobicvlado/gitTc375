@@ -93,17 +93,6 @@ Before a CAN message is transmitted, two messages need to be initialized. TX mes
 
 All functions are declared in the iLLD header *IfxCan_Can.h*.
 
-### Software delay implementation
-
-A software delay is used to introduce a waiting period between consecutive CAN message transmissions. The delay duration is specified in milliseconds and is implemented using the System Timer Module (STM).
-
-First, the number of STM ticks corresponding to one millisecond is calculated based on the STM clock frequency.
-
-Then, the total number of ticks required for the specified delay duration is computed.
-
-Finally, the function IfxStm_waitTicks() is used to block program execution until the calculated number of STM ticks has elapsed.
-
-All functions used for the delay implementation are declared in the iLLD header file IfxStm.h.
 
 ### Interrupt Service Routines (ISRs)
 Two interrupt services routines are implemented: one ISR that is triggered with the successful CAN message transmission and a second one that is triggered with the successful CAN message reception.
@@ -121,6 +110,7 @@ Before testing this code example:
 
 ## Run and Test
 After code compilation and flashing the device, perform the following steps:
+- In debug environment FlagTransmitMessage needs to be set to 1 in order to send the CAN message
 - Check that LED1 (1) is turned on (successful CAN message transmission by CAN node 0)
 - Check that LED2 (2) is turned on (successful CAN message reception by CAN node 1)
 

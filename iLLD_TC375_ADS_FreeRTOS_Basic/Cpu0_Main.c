@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * \file Cpu0_Main.c
- * \copyright Copyright (C) Infineon Technologies AG 2019
+ * \copyright Copyright (C) Infineon Technologies AG 2023
  * 
  * Use of this file is subject to the terms of use agreed between (i) you or the company in which ordinary course of 
  * business you are acting and (ii) Infineon Technologies AG or its licensees. If and as long as no such terms of use
@@ -23,50 +23,51 @@
  * COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN 
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
  * IN THE SOFTWARE.
-  *********************************************************************************************************************/
- /*\title TC375 FreeRTOS basic example
- * \abstract This example shows how to get started with using the AURIX(TM) FreeRTOS port
- * \description This example explores FreeRTOS usage on AURIX(TM) TC375 using two simple tasks and one interrupt
+ *********************************************************************************************************************/
+/*\title TC375 FreeRTOS basic example with system initialization task
+ * \abstract This example shows how to get started with using the AURIX(TM) FreeRTOS port with a dedicated init task
+ * \description This example explores FreeRTOS usage on AURIX(TM) TC375 using a system initialization task pattern
  *
  * \name iLLD_TC375_ADS_FreeRTOS_Basic
- * \version V1.0.0
+ * \version V1.1.0
  * \board AURIX TC375 lite Kit, KIT_A2G_TC375_LITE, TC37xTP_A-Step
- * \keywords AURIX, TC3XX, TC375, FreeRTOS, Blinky, Task, ERU, LED, Button, External Interrupt
+ * \keywords AURIX, TC3XX, TC375, FreeRTOS, Blinky, Task, ERU, LED, Button, External Interrupt, System Init
  * \documents See README.md
- * \lastUpdated 2023-04-27
+ * \lastUpdated 2024-01-XX
  *********************************************************************************************************************/
 #include "IfxCpu.h"
-#include "IfxScuWdt.h"
 
 #include "App_Config.h"
 #include "FreeRTOS.h"
 #include "task.h"
 
+/*********************************************************************************************************************/
+/*-------------------------------------------------Global variables--------------------------------------------------*/
+/*********************************************************************************************************************/
 IFX_ALIGN(4) IfxCpu_syncEvent g_cpuSyncEvent = 0;
 
+/*********************************************************************************************************************/
+/*---------------------------------------------Function Implementations----------------------------------------------*/
+/*********************************************************************************************************************/
 void core0_main(void)
 {
-    IfxCpu_enableInterrupts();
+    /* Low-level HW init (interrupts, watchdog, CPU sync) */
+    hw_init_minimal();
     
-    /* !!WATCHDOG0 AND SAFETY WATCHDOG ARE DISABLED HERE!!
-     * Enable the watchdogs and service them periodically if it is required
-     */
-    IfxScuWdt_disableCpuWatchdog(IfxScuWdt_getCpuWatchdogPassword());
-    IfxScuWdt_disableSafetyWatchdog(IfxScuWdt_getSafetyWatchdogPassword());
-    
-    /* Wait for CPU sync event */
-    IfxCpu_emitEvent(&g_cpuSyncEvent);
-    IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
-    
-    /* Create LED1 app task */
-    xTaskCreate(task_app_led1, "APP LED1", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
-
-    /* Create LED2 app task */
-    xTaskCreate(task_app_led2, "APP LED2", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
+    /* Create system initialization task with high priority */
+    xTaskCreate(
+        task_system_init,
+        "SYS_INIT",
+        1024,
+        NULL,
+        tskIDLE_PRIORITY + 3,
+        NULL
+    );
 
     /* Start the scheduler */
     vTaskStartScheduler();
     
+    /* Should never get here */
     while (1)
     {
     }

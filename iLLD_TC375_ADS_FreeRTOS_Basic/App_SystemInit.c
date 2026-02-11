@@ -1,5 +1,5 @@
 /**********************************************************************************************************************
- * \file App_Led1.c
+ * \file App_SystemInit.c
  * \copyright Copyright (C) Infineon Technologies AG 2023
  *
  * Use of this file is subject to the terms of use agreed between (i) you or the company in which ordinary course of
@@ -28,47 +28,69 @@
 /*********************************************************************************************************************/
 /*-----------------------------------------------------Includes------------------------------------------------------*/
 /*********************************************************************************************************************/
-#include "Port/Io/IfxPort_Io.h"
+#include "IfxCpu.h"
+#include "IfxScuWdt.h"
 
 #include "App_Config.h"
 #include "FreeRTOS.h"
 #include "task.h"
 
 /*********************************************************************************************************************/
-/*-----------------------------------------------------Macros--------------------------------------------------------*/
-/*********************************************************************************************************************/
-#define LED1_BLINKY_PERIOD_MS (250)                         /* The period (in milliseconds) at which LED1 will blink */
-
-/*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
 /*********************************************************************************************************************/
-int Test = 0;
+extern IFX_ALIGN(4) IfxCpu_syncEvent g_cpuSyncEvent;
 
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
 /*********************************************************************************************************************/
-/* Initialization function for LED1 app */
-static void app_init(void)
+/* Low-level hardware initialization */
+void hw_init_minimal(void)
 {
-    /* Setup the port/pin connected to LED1 to general output mode push-pull. This function can be
-     * used to initialize any port pin by specifying the port number, pin number and port pin mode.
+    /* Enable interrupts */
+    IfxCpu_enableInterrupts();
+
+    /* !!WATCHDOG0 AND SAFETY WATCHDOG ARE DISABLED HERE!!
+     * Enable the watchdogs and service them periodically if it is required
      */
-    IfxPort_setPinMode(LED_1.port, LED_1.pinIndex, IfxPort_Mode_outputPushPullGeneral);
+    IfxScuWdt_disableCpuWatchdog(IfxScuWdt_getCpuWatchdogPassword());
+    IfxScuWdt_disableSafetyWatchdog(IfxScuWdt_getSafetyWatchdogPassword());
+
+    /* Wait for CPU sync event */
+    IfxCpu_emitEvent(&g_cpuSyncEvent);
+    IfxCpu_waitEvent(&g_cpuSyncEvent, 1);
 }
 
-/* Task which runs the LED1 app */
-void task_app_led1(void *arg)
+/* Initialize all drivers and peripherals */
+static void init_drivers(void)
 {
-    app_init();
+    /* Add your driver initialization code here */
+    /* Example:
+     * - Initialize CAN
+     * - Initialize SPI
+     * - Initialize ADC
+     * - Initialize other peripherals
+     */
 
-    while (1)
-    {
-        /* Toggle LED1 state */
-        IfxPort_setPinState(LED_1.port, LED_1.pinIndex, IfxPort_State_toggled);
+    /* Placeholder for driver initialization */
+    /* This function will be expanded based on your system requirements */
+}
 
-        Test++;
+/* System initialization task */
+void task_system_init(void *arg)
+{
+    /* Full system initialization */
+    init_drivers();
 
-        /* Delay 250ms */
-        vTaskDelay(pdMS_TO_TICKS(LED1_BLINKY_PERIOD_MS));
-    }
+    /* Initialize CAN (will be done later) */
+    // init_can();
+
+    /* Create application tasks */
+    xTaskCreate(task_app_led1, "LED1", 512, NULL, tskIDLE_PRIORITY + 1, NULL);
+    xTaskCreate(task_app_led2, "LED2", 1024, NULL, tskIDLE_PRIORITY + 2, NULL);
+
+    /* Optional: signal "system ready" event here */
+    /* You can add a semaphore, event group, or flag to signal other tasks */
+
+    /* Delete self - initialization task is no longer needed */
+    vTaskDelete(NULL);
 }
