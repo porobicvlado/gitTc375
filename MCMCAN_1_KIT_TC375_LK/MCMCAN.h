@@ -56,7 +56,7 @@
 #define TWO_CONTROLLER_MODE_2       2
 
 /* Select mode here */
-#define CAN_MODE                    TWO_CONTROLLER_MODE_2       /* Change this value to switch between modes */
+#define CAN_MODE                    TWO_CONTROLLER_MODE_1       /* Change this value to switch between modes */
 
 /*********************************************************************************************************************/
 /*------------------------------------------------------Macros-------------------------------------------------------*/
@@ -114,7 +114,7 @@ void initLeds(void);
 
 #if (CAN_MODE != LOOPBACK)
 void Driver_Port_Init(void);
-void appWaitMilliseconds(uint32 milliseconds);
+//void appWaitMilliseconds(uint32 milliseconds);
 #endif
 
 #endif /* MCMCAN_H_ */

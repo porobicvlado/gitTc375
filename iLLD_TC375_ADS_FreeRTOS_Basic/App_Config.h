@@ -40,11 +40,13 @@
 /*********************************************************************************************************************/
 #define LED_1                   IfxPort_P00_5       /* Port/Pin for LED 1                                            */
 #define LED_2                   IfxPort_P00_6       /* Port/Pin for LED 2                                            */
-#define BUTTON_1                IfxPort_P00_7       /* Port/Pin for BUTTION 1 - Not directly used in this example    */
+#define BUTTON_1                IfxPort_P00_7       /* Port/Pin for BUTTON 1 - Not directly used in this example     */
 
 /*********************************************************************************************************************/
 /*------------------------------------------------Function Prototypes------------------------------------------------*/
 /*********************************************************************************************************************/
+void hw_init_minimal(void);
+void task_system_init(void *arg);
 void task_app_led1(void *arg);
 void task_app_led2(void *arg);
 

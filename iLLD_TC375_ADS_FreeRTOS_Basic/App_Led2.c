@@ -1,5 +1,5 @@
 /**********************************************************************************************************************
- * \file Cpu0_Main.c
+ * \file App_Led2.c
  * \copyright Copyright (C) Infineon Technologies AG 2023
  *
  * Use of this file is subject to the terms of use agreed between (i) you or the company in which ordinary course of
@@ -106,7 +106,7 @@ void task_app_led2(void *arg)
 
     while (1)
     {
-        // Wait for task notification and then toggle LED2
+        /* Wait for task notification and then toggle LED2 */
         ulTaskNotifyTake(0, portMAX_DELAY);
 
         /* Toggle LED2 state */

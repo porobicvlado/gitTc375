@@ -370,11 +370,11 @@ void initLeds(void)
 
 #if (CAN_MODE != LOOPBACK)
 /* Function to wait before sending new message */
-void appWaitMilliseconds(uint32 milliseconds)
-{
-    Ifx_TickTime ticksPerMs  = STM_FREQ_HZ / 1000ULL;
-    Ifx_TickTime ticksToWait = (Ifx_TickTime)milliseconds * ticksPerMs;
-
-    IfxStm_waitTicks(&MODULE_STM0, ticksToWait);
-}
+//void appWaitMilliseconds(uint32 milliseconds)
+//{
+//    Ifx_TickTime ticksPerMs  = STM_FREQ_HZ / 1000ULL;
+//    Ifx_TickTime ticksToWait = (Ifx_TickTime)milliseconds * ticksPerMs;
+//
+//    IfxStm_waitTicks(&MODULE_STM0, ticksToWait);
+//}
 #endif
