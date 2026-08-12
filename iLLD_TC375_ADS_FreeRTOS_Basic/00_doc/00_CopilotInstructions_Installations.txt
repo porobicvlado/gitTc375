@@ -1,0 +1,23 @@
+*******************************************************
+Prompt:
+--------------
+in plantuml, generate basic arch containing all used tasks and  isr in the project (including system tick isr as well, which is highly clear and concise:
+•	sequence diagram
+•	use case diagram
+•	activity diagram 
+•	component diagram
+*******************************************************
+
+Remarks:
+--------------
+1. sequence diagram - mostly usefull, use case diagram - partialy usefull, others NOT
+2. Run prompt periodicaly, to have up to date .pumls
+*******************************************************
+
+Installations:
+--------------
+VSCODE/extensions:
+- pantUML by jebbs (=official)  - USE ONLY THIS
+- Asciidoctor (ascii doc) - not usefull
+- Doxygen: run (in cmd window): doxygen config_file: https://www.doxygen.nl/manual/starting.html - not usefull
+*******************************************************
