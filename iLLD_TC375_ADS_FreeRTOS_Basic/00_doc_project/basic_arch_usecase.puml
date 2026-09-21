@@ -1,0 +1,58 @@
+@startuml basic_arch_usecase
+ title TC375 FreeRTOS Basic Architecture - Use Case
+
+ left to right direction
+ skinparam packageStyle rectangle
+ skinparam actorStyle awesome
+
+ actor "Power-on / CPU0" as Cpu0
+ actor "System Tick Timer" as Stm
+ actor "External Button / ERU" as Button
+ actor "FreeRTOS Scheduler" as Scheduler
+
+ rectangle "TC375 FreeRTOS Basic Application" {
+     usecase "Initialize CPU, watchdogs\nand CPU synchronization" as UC_HwInit
+     usecase "Start FreeRTOS scheduler" as UC_Start
+     usecase "Initialize system drivers" as UC_Drivers
+     usecase "Create application tasks" as UC_Create
+     usecase "Blink LED1 every 250 ms" as UC_Led1
+     usecase "Configure ERU and LED2" as UC_Led2Init
+     usecase "Wait for task notification" as UC_Wait
+     usecase "Toggle LED2" as UC_Led2
+     usecase "Process system tick" as UC_Tick
+     usecase "Perform context switch" as UC_Switch
+     usecase "Notify LED2 task from ISR" as UC_Notify
+ }
+
+ Cpu0 --> UC_HwInit
+ Cpu0 --> UC_Start
+ UC_Start .> UC_HwInit : <<include>>
+ UC_Start --> UC_Drivers : creates SYS_INIT task
+ UC_Drivers .> UC_Create : <<include>>
+ UC_Create .> UC_Led1 : <<include>>
+ UC_Create .> UC_Led2Init : <<include>>
+
+ Scheduler --> UC_Led1
+ Scheduler --> UC_Wait
+ Scheduler --> UC_Switch
+ UC_Led1 .> UC_Led2 : independent task
+ UC_Led2Init .> UC_Wait : <<include>>
+ UC_Wait .> UC_Led2 : notification received
+
+ Stm --> UC_Tick
+ UC_Tick .> UC_Switch : <<extend>>
+ Button --> UC_Notify
+ UC_Notify .> UC_Led2 : wakes task
+ UC_Notify .> UC_Switch : <<extend>>
+
+ note right of UC_Tick
+ vPortSystemTickHandler()
+ increments the FreeRTOS tick
+ and may request a yield.
+ end note
+
+ note right of UC_Notify
+ SCUERU_Int0_Handler()
+ calls vTaskNotifyGiveFromISR().
+ end note
+@enduml

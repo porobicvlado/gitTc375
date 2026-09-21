@@ -1,0 +1,71 @@
+@startuml
+ title TC375 FreeRTOS Basic Architecture - Sequence
+
+ autonumber
+
+ participant "core0_main" as Main
+ participant "FreeRTOS Scheduler" as Scheduler
+ participant "task_system_init" as Init
+ participant "task_app_led1" as Led1
+ participant "task_app_led2" as Led2
+ participant "SCUERU_Int0_Handler" as EruIsr
+ participant "vPortSystemTickHandler" as TickIsr
+ participant "vPortSystemContextHandler" as ContextIsr
+ participant "STM timer" as Stm
+ participant "ERU / Button" as Eru
+ participant "LED1" as Led1Hw
+ participant "LED2" as Led2Hw
+
+ Main -> Main: hw_init_minimal()
+ Main -> Scheduler: xTaskCreate(task_system_init, "SYS_INIT")
+ Main -> Scheduler: vTaskStartScheduler()
+ Scheduler -> TickIsr: Configure STM tick
+ Scheduler -> ContextIsr: Configure context-switch interrupt
+ Scheduler -> Init: Run SYS_INIT task
+
+ activate Init
+ Init -> Init: init_drivers()
+ Init -> Scheduler: xTaskCreate(task_app_led1, "LED1")
+ Init -> Scheduler: xTaskCreate(task_app_led2, "LED2")
+ Init -> Scheduler: vTaskDelete(NULL)
+ deactivate Init
+
+ Scheduler -> Led1: Run LED1 task
+ activate Led1
+ Led1 -> Led1: app_init()
+ loop Every 250 ms
+     Led1 -> Led1Hw: Toggle LED1
+     Led1 -> Scheduler: vTaskDelay(250 ms)
+ end
+ deactivate Led1
+
+ Scheduler -> Led2: Run LED2 task
+ activate Led2
+ Led2 -> Led2: Save current task handle
+ Led2 -> Led2: app_init() and configure ERU
+ loop Waiting for external event
+     Eru -> EruIsr: Falling edge interrupt
+     activate EruIsr
+     EruIsr -> Led2: vTaskNotifyGiveFromISR()
+     EruIsr -> Scheduler: portYIELD_FROM_ISR()
+     deactivate EruIsr
+     Scheduler -> Led2: Resume after notification
+     Led2 -> Led2Hw: Toggle LED2
+ end
+ deactivate Led2
+
+ loop Every system tick
+     Stm -> TickIsr: Compare match interrupt
+     activate TickIsr
+     TickIsr -> Scheduler: xTaskIncrementTick()
+     TickIsr -> Scheduler: portYIELD_FROM_ISR()
+     deactivate TickIsr
+     Scheduler -> ContextIsr: Context switch if required
+     ContextIsr -> Scheduler: vTaskSwitchContext()
+ end
+
+ note over Scheduler
+ The scheduler selects the highest-priority ready task.
+ LED2 has priority 2, LED1 priority 1, SYS_INIT priority 3.
+ end note
+@enduml
