@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.rt.hightec.agent.launcher.launchConfigurationType">
+    <stringAttribute key="ACC_HW" value=""/>
+    <booleanAttribute key="ENABLE_AGENTLOG" value="false"/>
+    <booleanAttribute key="ENABLE_FLASHING" value="true"/>
+    <booleanAttribute key="ENABLE_STOPPING" value="true"/>
+    <stringAttribute key="EXECUTABLE_PATH" value="${project_loc}/TriCore Debug (TASKING)/iLLD_TC375_ADS_FreeRTOS_Basic.elf"/>
+    <stringAttribute key="STOP_FUNCTION" value="core0_main"/>
+    <stringAttribute key="SVD" value="C:/Infineon/AURIX-Studio-1.10.28/build_system/bundled-artefacts-repo/svd/tc37xpd/1.1-2/device.svd"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="iLLD_TC375_ADS_FreeRTOS_Basic"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/iLLD_TC375_ADS_FreeRTOS_Basic"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_LOCATION" value="/iLLD_TC375_ADS_FreeRTOS_Basic/iLLD_TC375_ADS_FreeRTOS_Basic TriCore Debug (TASKING)_1.launch"/>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_PROJECT_NAME" value="iLLD_TC375_ADS_FreeRTOS_Basic"/>
+    <booleanAttribute key="org.eclipse.debug.ui.ATTR_SHARED" value="true"/>
+    <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="iLLD_TC375_ADS_FreeRTOS_Basic"/>
+    <stringAttribute key="org.eclipse.tcf.debug.executable_name" value="${project_loc}/TriCore Debug (TASKING)/iLLD_TC375_ADS_FreeRTOS_Basic.elf"/>
+</launchConfiguration>
