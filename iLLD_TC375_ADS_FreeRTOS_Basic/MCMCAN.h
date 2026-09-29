@@ -34,11 +34,14 @@
 #include <stdio.h>
 #include <string.h>
 #include "Ifx_Types.h"
-#include "IfxCan_Can.h"
-#include "IfxCan.h"
+#include "Can/Can/IfxCan_Can.h"
+#include "Can/Std/IfxCan.h"
 #include "IfxCpu_Irq.h"
-#include "IfxPort.h"                                        /* For GPIO Port Pin Control                            */
-#include "IfxStm.h"
+#include "IfxPort.h"
+#include "Stm/Std/IfxStm.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
 
 /*********************************************************************************************************************/
 /*--------------------------------------MODE SELECTION MACRO---------------------------------------------------------*/
@@ -81,16 +84,37 @@
 #define PIN6                        6                       /* LED2 used in RX ISR is connected to this pin         */
 #define INVALID_RX_DATA_VALUE       0xA5                    /* Used to invalidate RX message data content           */
 #define INVALID_ID_VALUE            (uint32)0xFFFFFFFF      /* Used to invalidate RX message ID value               */
-#define ISR_PRIORITY_CAN_TX         2                       /* Define the CAN TX interrupt priority                 */
-#define ISR_PRIORITY_CAN_RX         1                       /* Define the CAN RX interrupt priority                 */
+#define ISR_PRIORITY_CAN_TX         12
+#define ISR_PRIORITY_CAN_RX         13
 #define TX_DATA_LOW_WORD            (uint32)0xC0CAC01A      /* Define CAN data lower word to be transmitted         */
 #define TX_DATA_HIGH_WORD           (uint32)0xBA5EBA11      /* Define CAN data higher word to be transmitted        */
 #define MAXIMUM_CAN_DATA_PAYLOAD    2                       /* Define maximum classical CAN payload in 4-byte words */
 #define STM_FREQ_HZ                 100000000ULL
+#define CAN_RX_QUEUE_LENGTH         50
 
 /*********************************************************************************************************************/
 /*--------------------------------------------------Data Structures--------------------------------------------------*/
 /*********************************************************************************************************************/
+
+/* Structure for time data (4 bytes total) */
+typedef struct
+{
+    uint8 hours;      // 0-23
+    uint8 minutes;    // 0-59
+    uint8 seconds;    // 0-59
+    uint8 reserved;   // Padding to make it 4 bytes
+} TimeData_t;
+
+/* Structure for CAN message in Queue */
+typedef struct
+{
+    uint32 messageId;
+    uint32 counter;        // First 4 bytes
+    TimeData_t timeData;   // Next 4 bytes
+    uint8 dataLength;
+} CanRxMessage_t;
+
+/* MCMCAN module structure */
 typedef struct
 {
     IfxCan_Can_Config canConfig;                            /* CAN module configuration structure                   */
@@ -103,9 +127,15 @@ typedef struct
     IfxCan_Message rxMsg;                                   /* Received CAN message structure                       */
     uint32 txData[MAXIMUM_CAN_DATA_PAYLOAD];                /* Transmitted CAN data array                           */
     uint32 rxData[MAXIMUM_CAN_DATA_PAYLOAD];                /* Received CAN data array                              */
+    uint32 txCounter;
+    TimeData_t currentTime;  // Current time to send
 } McmcanType;
 
 /*********************************************************************************************************************/
+extern McmcanType g_mcmcan;
+extern QueueHandle_t g_canRxQueue;
+extern IfxPort_Pin_Config g_led1;
+extern IfxPort_Pin_Config g_led2;
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
 /*********************************************************************************************************************/
 void initMcmcan(void);
