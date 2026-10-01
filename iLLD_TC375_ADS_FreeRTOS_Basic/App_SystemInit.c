@@ -34,11 +34,14 @@
 #include "App_Config.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "queue.h"
+#include "MCMCAN.h"
 
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
 /*********************************************************************************************************************/
 extern IFX_ALIGN(4) IfxCpu_syncEvent g_cpuSyncEvent;
+QueueHandle_t g_canRxQueue = NULL;
 
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
@@ -63,16 +66,13 @@ void hw_init_minimal(void)
 /* Initialize all drivers and peripherals */
 static void init_drivers(void)
 {
-    /* Add your driver initialization code here */
-    /* Example:
-     * - Initialize CAN
-     * - Initialize SPI
-     * - Initialize ADC
-     * - Initialize other peripherals
-     */
+    #if (CAN_MODE != LOOPBACK)
+    /* Initialize CAN transceiver (P20.6 - STB pin) */
+    Driver_Port_Init_CAN_transceiver();
+    #endif
 
-    /* Placeholder for driver initialization */
-    /* This function will be expanded based on your system requirements */
+    /* Initialize MCMCAN module */
+    initMcmcan();
 }
 
 /* System initialization task */
@@ -81,16 +81,19 @@ void task_system_init(void *arg)
     /* Full system initialization */
     init_drivers();
 
-    /* Initialize CAN (will be done later) */
-    // init_can();
+    /* Create CAN RX Queue */
+    g_canRxQueue = xQueueCreate(CAN_RX_QUEUE_LENGTH, sizeof(CanRxMessage_t));
+
+    /* Initialize RX message structure */
+    IfxCan_Can_initMessage(&g_mcmcan.rxMsg);
+    memset((void *)(&g_mcmcan.rxData[0]), INVALID_RX_DATA_VALUE, MAXIMUM_CAN_DATA_PAYLOAD * sizeof(uint32));
 
     /* Create application tasks */
     xTaskCreate(task_app_led1, "LED1", 512, NULL, tskIDLE_PRIORITY + 1, NULL);
     xTaskCreate(task_app_led2, "LED2", 1024, NULL, tskIDLE_PRIORITY + 2, NULL);
-
-    /* Optional: signal "system ready" event here */
-    /* You can add a semaphore, event group, or flag to signal other tasks */
-
+    xTaskCreate(task_can_tx, "CAN_TX", 2048, NULL, tskIDLE_PRIORITY + 3, NULL);
+    xTaskCreate(task_can_rx, "CAN_RX", 2048, NULL, tskIDLE_PRIORITY + 4, NULL);
+    
     /* Delete self - initialization task is no longer needed */
     vTaskDelete(NULL);
 }
