@@ -59,7 +59,7 @@
 #define TWO_CONTROLLER_MODE_2       2
 
 /* Select mode here */
-#define CAN_MODE                    TWO_CONTROLLER_MODE_1       /* Change this value to switch between modes */
+#define CAN_MODE                    TWO_CONTROLLER_MODE_2       /* Change this value to switch between modes */
 
 /*********************************************************************************************************************/
 /*------------------------------------------------------Macros-------------------------------------------------------*/
@@ -114,7 +114,29 @@ typedef struct
     uint8 dataLength;
 } CanRxMessage_t;
 
-/* MCMCAN module structure */
+/* Structure for Counter data - separate Tx and Rx counters, independent of MCMCAN module config */
+typedef struct
+{
+    uint32 counterTx;   /* Counter value of the last transmitted message */
+    uint32 counterRx;   /* Counter value of the last received message    */
+} Counter_t;
+
+/* Structure for Current Time data - separate Tx and Rx time values, independent of MCMCAN module config */
+typedef struct
+{
+    TimeData_t currentTimeTx;   /* Time value of the last transmitted message */
+    TimeData_t currentTimeRx;   /* Time value of the last received message    */
+} CurrentTime_t;
+
+/* Structure for CAN message in Queue - carries RAW data only, no parsing done in ISR */
+typedef struct
+{
+    uint32 messageId;
+    uint32 data[MAXIMUM_CAN_DATA_PAYLOAD];   /* Raw CAN payload, forwarded as-is from ISR */
+    uint8  dataLength;
+} CanRxMessage_forward_t;
+
+/* MCMCAN module structure - pure CAN peripheral configuration and control, no counter/time data */
 typedef struct
 {
     IfxCan_Can_Config canConfig;                            /* CAN module configuration structure                   */
@@ -127,15 +149,15 @@ typedef struct
     IfxCan_Message rxMsg;                                   /* Received CAN message structure                       */
     uint32 txData[MAXIMUM_CAN_DATA_PAYLOAD];                /* Transmitted CAN data array                           */
     uint32 rxData[MAXIMUM_CAN_DATA_PAYLOAD];                /* Received CAN data array                              */
-    uint32 txCounter;
-    TimeData_t currentTime;  // Current time to send
 } McmcanType;
 
 /*********************************************************************************************************************/
-extern McmcanType g_mcmcan;
-extern QueueHandle_t g_canRxQueue;
-extern IfxPort_Pin_Config g_led1;
-extern IfxPort_Pin_Config g_led2;
+extern McmcanType          g_mcmcan;
+extern Counter_t           g_counter;
+extern CurrentTime_t       g_currentTime;
+extern QueueHandle_t       g_canRxQueue;
+extern IfxPort_Pin_Config  g_led1;
+extern IfxPort_Pin_Config  g_led2;
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
 /*********************************************************************************************************************/
 void initMcmcan(void);
@@ -143,7 +165,7 @@ void transmitCanMessage(void);
 void initLeds(void);
 
 #if (CAN_MODE != LOOPBACK)
-void Driver_Port_Init(void);
+void Driver_Port_Init_CAN_transceiver(void);
 //void appWaitMilliseconds(uint32 milliseconds);
 #endif
 

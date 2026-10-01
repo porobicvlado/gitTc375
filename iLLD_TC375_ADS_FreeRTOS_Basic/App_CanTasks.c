@@ -46,7 +46,10 @@ void task_can_tx(void *arg)
     while (1)
     {
         /* Update time (increment every second) */
-        updateTime(&g_mcmcan.currentTime);
+        updateTime(&g_currentTime.currentTimeTx);
+
+        /* Increment Tx counter before sending */
+        g_counter.counterTx++;
 
         /* Transmit message with Counter and Time */
         transmitCanMessage();
@@ -56,10 +59,10 @@ void task_can_tx(void *arg)
     }
 }
 
-/* CAN RX Task - Receives and processes messages */
+/* CAN RX Task - Receives raw message from queue and performs ALL parsing */
 void task_can_rx(void *arg)
 {
-    CanRxMessage_t rxMessage;
+    CanRxMessage_forward_t rxMessage;
 
     while (1)
     {
@@ -69,14 +72,19 @@ void task_can_rx(void *arg)
             /* Process received message */
             if (rxMessage.messageId == CAN_MESSAGE_ID2)
             {
-                /* Access received data */
-                uint32 receivedCounter = rxMessage.counter;
-                uint8 receivedHours = rxMessage.timeData.hours;
-                uint8 receivedMinutes = rxMessage.timeData.minutes;
-                uint8 receivedSeconds = rxMessage.timeData.seconds;
+                /* Parse Counter from first word */
+                g_counter.counterRx = rxMessage.data[0];
 
-                /* Debug: You can set breakpoint here to inspect values */
-                /* Or use the values for further processing */
+                /* Parse Time data from second word */
+                uint32 timeRaw = rxMessage.data[1];
+                TimeData_t rxTime;
+                rxTime.hours    = (timeRaw >> 24) & 0xFF;
+                rxTime.minutes  = (timeRaw >> 16) & 0xFF;
+                rxTime.seconds  = (timeRaw >> 8)  & 0xFF;
+                rxTime.reserved = timeRaw & 0xFF;
+
+                /* Update independent Rx time state */
+                g_currentTime.currentTimeRx = rxTime;
                 __nop();
             }
         }

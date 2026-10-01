@@ -34,6 +34,8 @@
 /*-------------------------------------------------Global variables--------------------------------------------------*/
 /*********************************************************************************************************************/
 McmcanType                  g_mcmcan;                       /* Global MCMCAN configuration and control structure    */
+Counter_t                   g_counter;                      /* Global Tx/Rx counter state, independent of CAN config */
+CurrentTime_t                g_currentTime;                  /* Global Tx/Rx time state, independent of CAN config    */
 IfxPort_Pin_Config          g_led1;                         /* Global LED1 configuration and control structure      */
 IfxPort_Pin_Config          g_led2;                         /* Global LED2 configuration and control structure      */
 
@@ -86,31 +88,23 @@ void canIsrTxHandler(void)
 void canIsrRxHandler(void)
 {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    CanRxMessage_t rxMessage;
+    CanRxMessage_forward_t rxMessage;
 
     IfxCan_Can_readMessage(&g_mcmcan.canDstNode, &g_mcmcan.rxMsg, g_mcmcan.rxData);
 
     IfxCan_Node_clearInterruptFlag(g_mcmcan.canDstNode.node,
                                    IfxCan_Interrupt_messageStoredToDedicatedRxBuffer);
 
-    /* Extract received data */
-    rxMessage.messageId = g_mcmcan.rxMsg.messageId;
-    rxMessage.counter = g_mcmcan.rxData[0];  // First 4 bytes = Counter
-
-    /* Extract time data from second 4 bytes */
-    uint32 timeRaw = g_mcmcan.rxData[1];
-    rxMessage.timeData.hours = (timeRaw >> 24) & 0xFF;
-    rxMessage.timeData.minutes = (timeRaw >> 16) & 0xFF;
-    rxMessage.timeData.seconds = (timeRaw >> 8) & 0xFF;
-    rxMessage.timeData.reserved = timeRaw & 0xFF;
-
+    /* Minimal processing: just forward raw received data, no parsing here */
+    rxMessage.messageId  = g_mcmcan.rxMsg.messageId;
+    rxMessage.data[0]    = g_mcmcan.rxData[0];
+    rxMessage.data[1]    = g_mcmcan.rxData[1];
     rxMessage.dataLength = MAXIMUM_CAN_DATA_PAYLOAD;
 
-     /* Send to queue */
+    /* Send raw message to queue */
     if (g_canRxQueue != NULL)
     {
         xQueueSendFromISR(g_canRxQueue, &rxMessage, &xHigherPriorityTaskWoken);
-        
     }
 
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
@@ -127,7 +121,7 @@ void canIsrRxHandler(void)
  *
  *--------------------------------------------------------------------------------------------------------
  */
-void Driver_Port_Init(void)
+void Driver_Port_Init_CAN_transceiver(void)
 {
     IfxPort_Pin_Config  pin26;
 
@@ -150,11 +144,17 @@ void initMcmcan(void)
      * ==========================================================================================
      */
 
-     /* Initialize time to 00:00:00 */
-    g_mcmcan.currentTime.hours = 0;
-    g_mcmcan.currentTime.minutes = 0;
-    g_mcmcan.currentTime.seconds = 0;
-    g_mcmcan.currentTime.reserved = 0;
+     /* Initialize Tx time to 00:00:00 */
+    g_currentTime.currentTimeTx.hours = 0;
+    g_currentTime.currentTimeTx.minutes = 0;
+    g_currentTime.currentTimeTx.seconds = 0;
+    g_currentTime.currentTimeTx.reserved = 0;
+
+    /* Initialize Rx time to 00:00:00 */
+    g_currentTime.currentTimeRx.hours = 0;
+    g_currentTime.currentTimeRx.minutes = 0;
+    g_currentTime.currentTimeRx.seconds = 0;
+    g_currentTime.currentTimeRx.reserved = 0;
 
     IfxCan_Can_initModuleConfig(&g_mcmcan.canConfig, &MODULE_CAN0);
 
@@ -309,8 +309,10 @@ void initMcmcan(void)
     g_mcmcan.canFilter.rxBufferOffset = IfxCan_RxBufferId_0;
 
     IfxCan_Can_setStandardFilter(&g_mcmcan.canDstNode, &g_mcmcan.canFilter);
-    /* Initialize TX counter */
-    g_mcmcan.txCounter = 0;
+
+    /* Initialize TX/RX counters (independent of CAN module config) */
+    g_counter.counterTx = 0;
+    g_counter.counterRx = 0;
 }
 
 /* Function to initialize both TX and RX messages with the default data values.
@@ -322,13 +324,13 @@ void transmitCanMessage(void)
     IfxCan_Can_initMessage(&g_mcmcan.txMsg);
 
     /* First 4 bytes: Counter */
-    g_mcmcan.txData[0] = g_mcmcan.txCounter;
+    g_mcmcan.txData[0] = g_counter.counterTx;
 
     /* Second 4 bytes: Time (H:M:S + reserved) */
-    g_mcmcan.txData[1] = ((uint32)g_mcmcan.currentTime.hours << 24) |
-                         ((uint32)g_mcmcan.currentTime.minutes << 16) |
-                         ((uint32)g_mcmcan.currentTime.seconds << 8) |
-                         ((uint32)g_mcmcan.currentTime.reserved);
+    g_mcmcan.txData[1] = ((uint32)g_currentTime.currentTimeTx.hours << 24) |
+                         ((uint32)g_currentTime.currentTimeTx.minutes << 16) |
+                         ((uint32)g_currentTime.currentTimeTx.seconds << 8) |
+                         ((uint32)g_currentTime.currentTimeTx.reserved);
 
     g_mcmcan.txMsg.messageId = CAN_MESSAGE_ID1;
 

@@ -68,7 +68,7 @@ static void init_drivers(void)
 {
     #if (CAN_MODE != LOOPBACK)
     /* Initialize CAN transceiver (P20.6 - STB pin) */
-    Driver_Port_Init();
+    Driver_Port_Init_CAN_transceiver();
     #endif
 
     /* Initialize MCMCAN module */
