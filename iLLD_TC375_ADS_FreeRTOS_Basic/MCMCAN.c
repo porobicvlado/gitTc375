@@ -29,7 +29,7 @@
 /*-----------------------------------------------------Includes------------------------------------------------------*/
 /*********************************************************************************************************************/
 #include "MCMCAN.h"
-
+#include "App_SystemInit.h"
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
 /*********************************************************************************************************************/
@@ -143,19 +143,6 @@ void initMcmcan(void)
      *  - initialize CAN module with the default configuration
      * ==========================================================================================
      */
-
-     /* Initialize Tx time to 00:00:00 */
-    g_currentTime.currentTimeTx.hours = 0;
-    g_currentTime.currentTimeTx.minutes = 0;
-    g_currentTime.currentTimeTx.seconds = 0;
-    g_currentTime.currentTimeTx.reserved = 0;
-
-    /* Initialize Rx time to 00:00:00 */
-    g_currentTime.currentTimeRx.hours = 0;
-    g_currentTime.currentTimeRx.minutes = 0;
-    g_currentTime.currentTimeRx.seconds = 0;
-    g_currentTime.currentTimeRx.reserved = 0;
-
     IfxCan_Can_initModuleConfig(&g_mcmcan.canConfig, &MODULE_CAN0);
 
     IfxCan_Can_initModule(&g_mcmcan.canModule, &g_mcmcan.canConfig);
@@ -310,27 +297,41 @@ void initMcmcan(void)
 
     IfxCan_Can_setStandardFilter(&g_mcmcan.canDstNode, &g_mcmcan.canFilter);
 
-    /* Initialize TX/RX counters (independent of CAN module config) */
+    /* ==========================================================================================
+     * Initialize Tx/Rx counter and time state (independent of CAN module configuration)
+     * ==========================================================================================
+     */
     g_counter.counterTx = 0;
     g_counter.counterRx = 0;
+
+    g_currentTime.currentTimeTx.hours    = 0;
+    g_currentTime.currentTimeTx.minutes  = 0;
+    g_currentTime.currentTimeTx.seconds  = 0;
+    g_currentTime.currentTimeTx.reserved = 0;
+
+    g_currentTime.currentTimeRx.hours    = 0;
+    g_currentTime.currentTimeRx.minutes  = 0;
+    g_currentTime.currentTimeRx.seconds  = 0;
+    g_currentTime.currentTimeRx.reserved = 0;
 }
 
-/* Function to initialize both TX and RX messages with the default data values.
- * After initialization of the messages, the TX message is transmitted.
+/* Function to build and transmit a CAN message with the given counter and time values.
+ * Changed: receives the data to send as parameters instead of reading g_counter / g_currentTime
+ * directly - the function no longer has a hidden dependency on global state.
  */
-void transmitCanMessage(void)
+void transmitCanMessage(uint32 counterTx, TimeData_t timeTx)
 {
     /* Initialize TX message */
     IfxCan_Can_initMessage(&g_mcmcan.txMsg);
 
     /* First 4 bytes: Counter */
-    g_mcmcan.txData[0] = g_counter.counterTx;
+    g_mcmcan.txData[0] = counterTx;
 
     /* Second 4 bytes: Time (H:M:S + reserved) */
-    g_mcmcan.txData[1] = ((uint32)g_currentTime.currentTimeTx.hours << 24) |
-                         ((uint32)g_currentTime.currentTimeTx.minutes << 16) |
-                         ((uint32)g_currentTime.currentTimeTx.seconds << 8) |
-                         ((uint32)g_currentTime.currentTimeTx.reserved);
+    g_mcmcan.txData[1] = ((uint32)timeTx.hours    << 24) |
+                         ((uint32)timeTx.minutes  << 16) |
+                         ((uint32)timeTx.seconds  << 8)  |
+                         ((uint32)timeTx.reserved);
 
     g_mcmcan.txMsg.messageId = CAN_MESSAGE_ID1;
 
@@ -341,7 +342,9 @@ void transmitCanMessage(void)
     }
 }
 
-/* Function to initialize the LEDs */
+/* Function to initialize the LEDs
+ * NOTE: Currently NOT called anywhere in the project (unused). Kept for potential
+ * future use / debugging.*/
 void initLeds(void)
 {
     /* ======================================================================

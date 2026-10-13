@@ -6,8 +6,9 @@
 /*********************************************************************************************************************/
 /*-----------------------------------------------------Includes------------------------------------------------------*/
 /*********************************************************************************************************************/
-#include "MCMCAN.h"
+#include "App_SystemInit.h"
 #include "App_Config.h"
+#include "MCMCAN.h"
 
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
@@ -51,8 +52,9 @@ void task_can_tx(void *arg)
         /* Increment Tx counter before sending */
         g_counter.counterTx++;
 
-        /* Transmit message with Counter and Time */
-        transmitCanMessage();
+        /* Transmit message with Counter and Time - data is now passed explicitly,
+         * transmitCanMessage() no longer reads g_counter / g_currentTime on its own */
+        transmitCanMessage(g_counter.counterTx, g_currentTime.currentTimeTx);
 
         /* Send every 1 second */
         vTaskDelay(pdMS_TO_TICKS(1000));
@@ -75,16 +77,13 @@ void task_can_rx(void *arg)
                 /* Parse Counter from first word */
                 g_counter.counterRx = rxMessage.data[0];
 
-                /* Parse Time data from second word */
+                /* Parse Time data from second word directly into global Rx time state
+                 * (removed the intermediate local TimeData_t rxTime copy - not needed) */
                 uint32 timeRaw = rxMessage.data[1];
-                TimeData_t rxTime;
-                rxTime.hours    = (timeRaw >> 24) & 0xFF;
-                rxTime.minutes  = (timeRaw >> 16) & 0xFF;
-                rxTime.seconds  = (timeRaw >> 8)  & 0xFF;
-                rxTime.reserved = timeRaw & 0xFF;
-
-                /* Update independent Rx time state */
-                g_currentTime.currentTimeRx = rxTime;
+                g_currentTime.currentTimeRx.hours    = (timeRaw >> 24) & 0xFF;
+                g_currentTime.currentTimeRx.minutes  = (timeRaw >> 16) & 0xFF;
+                g_currentTime.currentTimeRx.seconds  = (timeRaw >> 8)  & 0xFF;
+                g_currentTime.currentTimeRx.reserved = timeRaw & 0xFF;
                 __nop();
             }
         }

@@ -71,12 +71,12 @@
     #define CAN_MESSAGE_ID2         (uint32)0x777           /* RX Message ID (same for loopback)                    */
 
 #elif (CAN_MODE == TWO_CONTROLLER_MODE_1)
-    #define CAN_MESSAGE_ID1         (uint32)0x777           /* TX ID for Board 1                                    */
-    #define CAN_MESSAGE_ID2         (uint32)0x888           /* RX ID for Board 1                                    */
+    #define CAN_MESSAGE_ID1         (uint32)0x123           /* TX ID for Board 1                                    */
+    #define CAN_MESSAGE_ID2         (uint32)0x456           /* RX ID for Board 1                                    */
 
 #elif (CAN_MODE == TWO_CONTROLLER_MODE_2)
-    #define CAN_MESSAGE_ID1         (uint32)0x888           /* TX ID for Board 2                                    */
-    #define CAN_MESSAGE_ID2         (uint32)0x777           /* RX ID for Board 2                                    */
+    #define CAN_MESSAGE_ID1         (uint32)0x456           /* TX ID for Board 2                                    */
+    #define CAN_MESSAGE_ID2         (uint32)0x123           /* RX ID for Board 2                                    */
 #endif
 
 /* Common macros */
@@ -155,13 +155,16 @@ typedef struct
 extern McmcanType          g_mcmcan;
 extern Counter_t           g_counter;
 extern CurrentTime_t       g_currentTime;
-extern QueueHandle_t       g_canRxQueue;
 extern IfxPort_Pin_Config  g_led1;
 extern IfxPort_Pin_Config  g_led2;
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
 /*********************************************************************************************************************/
 void initMcmcan(void);
-void transmitCanMessage(void);
+
+/* Changed: now receives counter and time values as parameters instead of reading g_counter /
+ * g_currentTime directly - makes the dependency explicit and the function easier to test. */
+void transmitCanMessage(uint32 counterTx, TimeData_t timeTx);
+
 void initLeds(void);
 
 #if (CAN_MODE != LOOPBACK)
