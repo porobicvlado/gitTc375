@@ -49,5 +49,7 @@ void hw_init_minimal(void);
 void task_system_init(void *arg);
 void task_app_led1(void *arg);
 void task_app_led2(void *arg);
+void task_can_tx(void *arg);
+void task_can_rx(void *arg);
 
 #endif /* APP_CONFIG_H_ */
