@@ -86,7 +86,7 @@ void task_can_rx(void *arg)
                 g_currentTime.currentTimeRx.seconds  = (timeRaw >> 8)  & 0xFF;
                 g_currentTime.currentTimeRx.reserved = timeRaw & 0xFF;
 
-                /* ====== NOVO - UART ispis primljene CAN poruke ====== */
+
                 uart_send_string("CAN RX: counter=");
                                uart_send_uint(g_counter.counterRx);
                                uart_send_string(" time=");
@@ -96,9 +96,6 @@ void task_can_rx(void *arg)
                                uart_send_string(":");
                                uart_send_uint_padded(g_currentTime.currentTimeRx.seconds, 2);
                                uart_send_string("\r\n");
-                               /* ===================================================== */
-
-
                 __nop();
             }
         }

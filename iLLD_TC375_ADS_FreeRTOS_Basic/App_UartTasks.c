@@ -77,6 +77,7 @@ void UART0_RxISR(void)
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
     uint8_t ch = (uint8_t)IfxAsclin_readRxData(UART_MODULE);
 
+    IfxAsclin_clearRxFifoFillLevelFlag(UART_MODULE);
     uart_rx_buffer_push(ch);
 
     xSemaphoreGiveFromISR(g_uartRxSem, &xHigherPriorityTaskWoken);
@@ -93,8 +94,6 @@ void task_uart_rx(void *arg)
         {
             uint8_t ch = uart_rx_buffer_pop();
 
-            uart_send_char(ch); /* echo */
-
             if (ch == '\r' || ch == '\n')
             {
                 if (g_cmdLen > 0)
@@ -103,8 +102,6 @@ void task_uart_rx(void *arg)
                     uart_process_command(g_cmdBuf);
                     g_cmdLen = 0;
                 }
-
-                uart_send_string(">> Primljeno!\r\n");
             }
             else
             {
@@ -199,7 +196,7 @@ void uart_send_uint_padded(uint32 value, uint8 width)
 
 static void uart_process_command(const char *cmd)
 {
-    static const char prefix[] = "uartVar=";
+    static const char prefix[] = "testvar=";
     const size_t prefixLen = sizeof(prefix) - 1u;
 
     if (strncmp(cmd, prefix, prefixLen) == 0)
@@ -222,7 +219,7 @@ static void uart_process_command(const char *cmd)
 
         g_uartVar = sign * result;
 
-        uart_send_string("OK, uartVar = ");
+        uart_send_string("testvar=");
         uart_send_uint((uint32)g_uartVar);
         uart_send_string("\r\n");
     }
