@@ -1,3 +1,6 @@
+#include <string.h>
+#include <stdio.h>
+
 #include "App_UartTasks.h"
 #include "Asclin/Asc/IfxAsclin_Asc.h"
 #include "IfxAsclin_PinMap.h"
@@ -7,8 +10,8 @@
 SemaphoreHandle_t g_uartRxSem   = NULL;
 QueueHandle_t     g_uartTxQueue = NULL;
 
-static IfxAsclin_Asc   g_ascHandle;
-static uint8_t         g_rxBuf[UART_RX_RINGBUF_SIZE];
+static IfxAsclin_Asc     g_ascHandle;
+static uint8_t           g_rxBuf[UART_RX_RINGBUF_SIZE];
 static volatile uint16_t g_rxHead = 0, g_rxTail = 0;
 
 #define UART_MODULE   (&MODULE_ASCLIN0)
@@ -21,10 +24,9 @@ volatile sint32 g_uartVar = 0;
 static char    g_cmdBuf[UART_CMD_BUF_SIZE];
 static uint8_t g_cmdLen = 0;
 
-/*-------------------------------------------------- Ring buffer --------------------------------------------------*/
 static void uart_rx_buffer_push(uint8_t ch)
 {
-    uint16_t next = (uint16_t)((g_rxHead + 1u) % UART_RX_RINGBUF_SIZE);
+    uint16_t next = (uint16_t)((g_rxHead + 1u) & (UART_RX_RINGBUF_SIZE - 1u));
     if (next != g_rxTail)
     {
         g_rxBuf[g_rxHead] = ch;
@@ -38,9 +40,24 @@ static uint8_t uart_rx_buffer_pop(void)
     if (g_rxHead != g_rxTail)
     {
         ch = g_rxBuf[g_rxTail];
-        g_rxTail = (uint16_t)((g_rxTail + 1u) % UART_RX_RINGBUF_SIZE);
+        g_rxTail = (uint16_t)((g_rxTail + 1u) & (UART_RX_RINGBUF_SIZE - 1u));
     }
     return ch;
+}
+
+static void uart_send_msg(const char *data, uint16_t len)
+{
+    UartTxMsg_t msg;
+
+    if (len > UART_TX_MSG_MAX_LEN)
+    {
+        len = UART_TX_MSG_MAX_LEN;
+    }
+
+    memcpy(msg.data, data, len);
+    msg.len = len;
+
+    (void)xQueueSend(g_uartTxQueue, &msg, portMAX_DELAY);
 }
 
 /*-------------------------------------------------- Hardware init ------------------------------------------------*/
@@ -68,6 +85,9 @@ void init_uart(void)
     IfxAsclin_Asc_initModule(&g_ascHandle, &ascConfig);
 
     UART_MODULE->FLAGSSET.B.TFLS = 1;
+
+    g_uartRxSem   = xSemaphoreCreateBinary();
+    g_uartTxQueue = xQueueCreate(UART_TX_QUEUE_LENGTH, sizeof(UartTxMsg_t));
 }
 
 /*-------------------------------------------------- ISR -----------------------------------------------------------*/
@@ -87,6 +107,8 @@ void UART0_RxISR(void)
 /*-------------------------------------------------- Tasks ---------------------------------------------------------*/
 void task_uart_rx(void *arg)
 {
+    (void)arg;
+
     for (;;)
     {
         xSemaphoreTake(g_uartRxSem, portMAX_DELAY);
@@ -116,23 +138,28 @@ void task_uart_rx(void *arg)
 
 void task_uart_tx(void *arg)
 {
-    uint8_t ch;
+    UartTxMsg_t msg;
+    (void)arg;
+
     for (;;)
     {
-        xQueueReceive(g_uartTxQueue, &ch, portMAX_DELAY);
-
-        while (IfxAsclin_getTxFifoFillLevelFlagStatus(UART_MODULE) != TRUE)
+        xQueueReceive(g_uartTxQueue, &msg, portMAX_DELAY);
+        for (uint16_t i = 0; i < msg.len; i++)
         {
+            while (IfxAsclin_getTxFifoFillLevelFlagStatus(UART_MODULE) != TRUE)
+            {
+            }
+            IfxAsclin_clearTxFifoFillLevelFlag(UART_MODULE);
+            IfxAsclin_writeTxData(UART_MODULE, (uint8_t)msg.data[i]);
         }
-        IfxAsclin_clearTxFifoFillLevelFlag(UART_MODULE);
-        IfxAsclin_writeTxData(UART_MODULE, ch);
     }
 }
 
 /*-------------------------------------------------- Public API ----------------------------------------------------*/
 void uart_send_char(uint8_t ch)
 {
-    xQueueSend(g_uartTxQueue, &ch, portMAX_DELAY);
+    char c = (char)ch;
+    uart_send_msg(&c, 1u);
 }
 
 uint8_t uart_receive_char(void)
@@ -146,15 +173,9 @@ uint8_t uart_receive_char(void)
     return ch;
 }
 
-/*-------------------------------------------------- Formatted output helpers --------------------------------------*/
-
 void uart_send_string(const char *str)
 {
-    while (*str != '\0')
-    {
-        uart_send_char((uint8_t)*str);
-        str++;
-    }
+    uart_send_msg(str, (uint16_t)strlen(str));
 }
 
 void uart_send_uint(uint32 value)
@@ -164,9 +185,11 @@ void uart_send_uint(uint32 value)
 
 void uart_send_uint_padded(uint32 value, uint8 width)
 {
-    char  digits[10];
-    uint8 count = 0;
-    uint32 v = value;
+    char     buf[UART_TX_MSG_MAX_LEN];
+    char     digits[10];
+    uint8    count = 0;
+    uint32   v = value;
+    uint16_t idx = 0;
 
     if (v == 0)
     {
@@ -181,20 +204,21 @@ void uart_send_uint_padded(uint32 value, uint8 width)
         }
     }
 
-    for (uint8 p = count; p < width; p++)
+    for (uint8 p = count; (p < width) && (idx < sizeof(buf)); p++)
     {
-        uart_send_char((uint8_t)'0');
+        buf[idx++] = '0';
     }
 
-    while (count > 0)
+    while ((count > 0) && (idx < sizeof(buf)))
     {
         count--;
-        uart_send_char((uint8_t)digits[count]);
+        buf[idx++] = digits[count];
     }
+
+    uart_send_msg(buf, idx);
 }
 
-
-static void uart_process_command(const char *cmd)
+void uart_process_command(const char *cmd)
 {
     static const char prefix[] = "testvar=";
     const size_t prefixLen = sizeof(prefix) - 1u;
@@ -204,6 +228,8 @@ static void uart_process_command(const char *cmd)
         const char *numStr = cmd + prefixLen;
         sint32 sign   = 1;
         sint32 result = 0;
+        char   resp[UART_TX_MSG_MAX_LEN];
+        int    n;
 
         if (*numStr == '-')
         {
@@ -219,8 +245,10 @@ static void uart_process_command(const char *cmd)
 
         g_uartVar = sign * result;
 
-        uart_send_string("testvar=");
-        uart_send_uint((uint32)g_uartVar);
-        uart_send_string("\r\n");
+        n = snprintf(resp, sizeof(resp), "testvar=%ld\r\n", (long)g_uartVar);
+        if (n > 0)
+        {
+            uart_send_msg(resp, (uint16_t)n);
+        }
     }
 }
