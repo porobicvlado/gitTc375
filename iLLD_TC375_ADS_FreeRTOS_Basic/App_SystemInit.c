@@ -74,16 +74,22 @@ static void init_drivers(void)
 
     /* Initialize MCMCAN module */
     initMcmcan();
+    /* Initialize UART module */
+    init_uart();
+
 }
 
 /* System initialization task */
 void task_system_init(void *arg)
 {
-    /* Full system initialization */
-    init_drivers();
 
     /* Create CAN RX Queue */
     g_canRxQueue = xQueueCreate(CAN_RX_QUEUE_LENGTH, sizeof(CanRxMessage_t));
+    g_uartRxSem   = xSemaphoreCreateBinary();                              /* <-- DODATO */
+    g_uartTxQueue = xQueueCreate(UART_TX_QUEUE_LENGTH, sizeof(uint8_t));
+
+    /* Full system initialization */
+        init_drivers();
 
     /* Initialize RX message structure */
     IfxCan_Can_initMessage(&g_mcmcan.rxMsg);
@@ -92,9 +98,17 @@ void task_system_init(void *arg)
     /* Create application tasks */
     xTaskCreate(task_app_led1, "LED1", 512, NULL, tskIDLE_PRIORITY + 1, NULL);
     xTaskCreate(task_app_led2, "LED2", 1024, NULL, tskIDLE_PRIORITY + 2, NULL);
-    xTaskCreate(task_can_tx, "CAN_TX", 2048, NULL, tskIDLE_PRIORITY + 3, NULL);
-    xTaskCreate(task_can_rx, "CAN_RX", 2048, NULL, tskIDLE_PRIORITY + 4, NULL);
+    xTaskCreate(task_can_tx, "CAN_TX", 1024, NULL, tskIDLE_PRIORITY + 3, NULL);
+    xTaskCreate(task_can_rx, "CAN_RX", 1024, NULL, tskIDLE_PRIORITY + 4, NULL);
+    xTaskCreate(task_uart_rx,  "UART_RX", 1024, NULL, tskIDLE_PRIORITY + 6, NULL);
+    xTaskCreate(task_uart_tx,  "UART_TX", 1024, NULL, tskIDLE_PRIORITY + 7, NULL);
     
+    const char *testMsg = "UART TX OK\r\n";
+        for (int i = 0; testMsg[i] != '\0'; i++)
+        {
+            uart_send_char((uint8_t)testMsg[i]);
+        }
+
     /* Delete self - initialization task is no longer needed */
     vTaskDelete(NULL);
 }
