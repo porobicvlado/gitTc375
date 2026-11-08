@@ -24,41 +24,10 @@ volatile sint32 g_uartVar = 0;
 static char    g_cmdBuf[UART_CMD_BUF_SIZE];
 static uint8_t g_cmdLen = 0;
 
-static void uart_rx_buffer_push(uint8_t ch)
-{
-    uint16_t next = (uint16_t)((g_rxHead + 1u) & (UART_RX_RINGBUF_SIZE - 1u));
-    if (next != g_rxTail)
-    {
-        g_rxBuf[g_rxHead] = ch;
-        g_rxHead = next;
-    }
-}
-
-static uint8_t uart_rx_buffer_pop(void)
-{
-    uint8_t ch = 0;
-    if (g_rxHead != g_rxTail)
-    {
-        ch = g_rxBuf[g_rxTail];
-        g_rxTail = (uint16_t)((g_rxTail + 1u) & (UART_RX_RINGBUF_SIZE - 1u));
-    }
-    return ch;
-}
-
-static void uart_send_msg(const char *data, uint16_t len)
-{
-    UartTxMsg_t msg;
-
-    if (len > UART_TX_MSG_MAX_LEN)
-    {
-        len = UART_TX_MSG_MAX_LEN;
-    }
-
-    memcpy(msg.data, data, len);
-    msg.len = len;
-
-    (void)xQueueSend(g_uartTxQueue, &msg, portMAX_DELAY);
-}
+/* Forward declarations of static helpers used by init_uart / ISR below */
+static void    uart_rx_buffer_push(uint8_t ch);
+static uint8_t uart_rx_buffer_pop(void);
+static void    uart_send_msg(const char *data, uint16_t len);
 
 /*-------------------------------------------------- Hardware init ------------------------------------------------*/
 void init_uart(void)
@@ -102,6 +71,43 @@ void UART0_RxISR(void)
 
     xSemaphoreGiveFromISR(g_uartRxSem, &xHigherPriorityTaskWoken);
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+
+/*-------------------------------------------------- Ring buffer helpers -------------------------------------------*/
+static void uart_rx_buffer_push(uint8_t ch)
+{
+    uint16_t next = (uint16_t)((g_rxHead + 1u) & (UART_RX_RINGBUF_SIZE - 1u));
+    if (next != g_rxTail)
+    {
+        g_rxBuf[g_rxHead] = ch;
+        g_rxHead = next;
+    }
+}
+
+static uint8_t uart_rx_buffer_pop(void)
+{
+    uint8_t ch = 0;
+    if (g_rxHead != g_rxTail)
+    {
+        ch = g_rxBuf[g_rxTail];
+        g_rxTail = (uint16_t)((g_rxTail + 1u) & (UART_RX_RINGBUF_SIZE - 1u));
+    }
+    return ch;
+}
+
+static void uart_send_msg(const char *data, uint16_t len)
+{
+    UartTxMsg_t msg;
+
+    if (len > UART_TX_MSG_MAX_LEN)
+    {
+        len = UART_TX_MSG_MAX_LEN;
+    }
+
+    memcpy(msg.data, data, len);
+    msg.len = len;
+
+    (void)xQueueSend(g_uartTxQueue, &msg, portMAX_DELAY);
 }
 
 /*-------------------------------------------------- Tasks ---------------------------------------------------------*/
@@ -156,12 +162,6 @@ void task_uart_tx(void *arg)
 }
 
 /*-------------------------------------------------- Public API ----------------------------------------------------*/
-void uart_send_char(uint8_t ch)
-{
-    char c = (char)ch;
-    uart_send_msg(&c, 1u);
-}
-
 uint8_t uart_receive_char(void)
 {
     uint8_t ch;
@@ -180,15 +180,10 @@ void uart_send_string(const char *str)
 
 void uart_send_uint(uint32 value)
 {
-    uart_send_uint_padded(value, 0);
-}
-
-void uart_send_uint_padded(uint32 value, uint8 width)
-{
-    char     buf[UART_TX_MSG_MAX_LEN];
-    char     digits[10];
-    uint8    count = 0;
-    uint32   v = value;
+    char   buf[UART_TX_MSG_MAX_LEN];
+    char   digits[10];
+    uint8  count = 0;
+    uint32 v = value;
     uint16_t idx = 0;
 
     if (v == 0)
@@ -202,11 +197,6 @@ void uart_send_uint_padded(uint32 value, uint8 width)
             digits[count++] = (char)('0' + (v % 10u));
             v /= 10u;
         }
-    }
-
-    for (uint8 p = count; (p < width) && (idx < sizeof(buf)); p++)
-    {
-        buf[idx++] = '0';
     }
 
     while ((count > 0) && (idx < sizeof(buf)))

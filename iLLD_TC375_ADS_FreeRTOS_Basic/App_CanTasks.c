@@ -78,24 +78,22 @@ void task_can_rx(void *arg)
                 /* Parse Counter from first word */
                 g_counter.counterRx = rxMessage.data[0];
 
-                /* Parse Time data from second word directly into global Rx time state
-                 * (removed the intermediate local TimeData_t rxTime copy - not needed) */
+                /* Parse Time data from second word directly into global Rx time state */
                 uint32 timeRaw = rxMessage.data[1];
                 g_currentTime.currentTimeRx.hours    = (timeRaw >> 24) & 0xFF;
                 g_currentTime.currentTimeRx.minutes  = (timeRaw >> 16) & 0xFF;
                 g_currentTime.currentTimeRx.seconds  = (timeRaw >> 8)  & 0xFF;
                 g_currentTime.currentTimeRx.reserved = timeRaw & 0xFF;
 
-
                 uart_send_string("CAN RX: counter=");
-                               uart_send_uint(g_counter.counterRx);
-                               uart_send_string(" time=");
-                               uart_send_uint_padded(g_currentTime.currentTimeRx.hours, 2);
-                               uart_send_string(":");
-                               uart_send_uint_padded(g_currentTime.currentTimeRx.minutes, 2);
-                               uart_send_string(":");
-                               uart_send_uint_padded(g_currentTime.currentTimeRx.seconds, 2);
-                               uart_send_string("\r\n");
+                uart_send_uint(g_counter.counterRx);
+                uart_send_string(" time=");
+                uart_send_uint(g_currentTime.currentTimeRx.hours);
+                uart_send_string(":");
+                uart_send_uint(g_currentTime.currentTimeRx.minutes);
+                uart_send_string(":");
+                uart_send_uint(g_currentTime.currentTimeRx.seconds);
+                uart_send_string("\r\n");
                 __nop();
             }
         }

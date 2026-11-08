@@ -104,10 +104,7 @@ void task_system_init(void *arg)
     xTaskCreate(task_uart_tx,  "UART_TX", 1024, NULL, tskIDLE_PRIORITY + 7, NULL);
     
     const char *testMsg = "UART TX OK\r\n";
-        for (int i = 0; testMsg[i] != '\0'; i++)
-        {
-            uart_send_char((uint8_t)testMsg[i]);
-        }
+    uart_send_string(testMsg);
 
     /* Delete self - initialization task is no longer needed */
     vTaskDelete(NULL);
