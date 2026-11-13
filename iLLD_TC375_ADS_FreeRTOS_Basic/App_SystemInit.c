@@ -85,11 +85,12 @@ void task_system_init(void *arg)
 
     /* Create CAN RX Queue */
     g_canRxQueue = xQueueCreate(CAN_RX_QUEUE_LENGTH, sizeof(CanRxMessage_t));
-    g_uartRxSem   = xSemaphoreCreateBinary();                              /* <-- DODATO */
-    g_uartTxQueue = xQueueCreate(UART_TX_QUEUE_LENGTH, sizeof(uint8_t));
+    /* Create Uart Rx Semaphore and TX Queue */
+    g_uartRxSem   = xSemaphoreCreateBinary();
+    g_uartTxQueue = xQueueCreate(UART_TX_QUEUE_LENGTH, sizeof(UartTxMsg_t));
 
     /* Full system initialization */
-        init_drivers();
+    init_drivers();
 
     /* Initialize RX message structure */
     IfxCan_Can_initMessage(&g_mcmcan.rxMsg);

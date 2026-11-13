@@ -54,9 +54,6 @@ void init_uart(void)
     IfxAsclin_Asc_initModule(&g_ascHandle, &ascConfig);
 
     UART_MODULE->FLAGSSET.B.TFLS = 1;
-
-    g_uartRxSem   = xSemaphoreCreateBinary();
-    g_uartTxQueue = xQueueCreate(UART_TX_QUEUE_LENGTH, sizeof(UartTxMsg_t));
 }
 
 /*-------------------------------------------------- ISR -----------------------------------------------------------*/
