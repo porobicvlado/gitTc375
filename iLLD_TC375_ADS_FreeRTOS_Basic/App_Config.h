@@ -34,6 +34,7 @@
 #include "Ifx_Types.h"
 #include "IfxPort_PinMap.h"
 #include "Port/Io/IfxPort_Io.h"
+#include "App_UartTasks.h"
 
 /*********************************************************************************************************************/
 /*-----------------------------------------------------Macros--------------------------------------------------------*/
@@ -41,6 +42,8 @@
 #define LED_1                   IfxPort_P00_5       /* Port/Pin for LED 1                                            */
 #define LED_2                   IfxPort_P00_6       /* Port/Pin for LED 2                                            */
 #define BUTTON_1                IfxPort_P00_7       /* Port/Pin for BUTTON 1 - Not directly used in this example     */
+#define ISR_PRIORITY_UART_RX    41
+#define ISR_PRIORITY_UART_TX    40
 
 /*********************************************************************************************************************/
 /*------------------------------------------------Function Prototypes------------------------------------------------*/
