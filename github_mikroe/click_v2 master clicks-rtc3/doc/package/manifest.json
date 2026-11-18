@@ -1,0 +1,22 @@
+{
+    "display_name": "RTC 3 Click",
+    "name": "mikroe.click.rtc3",
+    "type": "click",
+    "version": "2.2.1",
+    "pid": "MIKROE-1839",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Rtc3",
+                "subdir_name": "lib_rtc3",
+                "path": "RTC 3 Click/data/lib_rtc3"
+            }
+        ]
+    }
+}
